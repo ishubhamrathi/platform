@@ -1,0 +1,16 @@
+{
+  "name": "platform",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Orchestrates backend (Spring Boot :8080) and frontend (Vite :3002) submodules",
+  "scripts": {
+    "dev": "concurrently -n backend,frontend -c blue,green \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "node scripts/run-backend.js",
+    "dev:frontend": "node scripts/run-frontend.js",
+    "dev:logs": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/dev-logs.ps1",
+    "logs": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/tail-logs.ps1"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
