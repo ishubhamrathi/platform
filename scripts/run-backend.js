@@ -5,6 +5,6 @@ const isWindows = process.platform === 'win32';
 const script = isWindows ? 'gradlew.bat' : './gradlew';
 const cwd = path.join(__dirname, '..', 'backend');
 
-const child = spawn(script, ['bootRun'], { cwd, stdio: 'inherit' });
+const child = spawn(script, ['bootRun'], { cwd, stdio: 'inherit', shell: isWindows });
 
 child.on('exit', (code) => process.exit(code ?? 0));
