@@ -21,15 +21,119 @@ and delivers through enabled channels.
 
 ---
 
+## 0. Progress Tracker (measurements / TME)
+
+Turn a timeline into an **interactive progress tracker**: log time-series
+measurements (weight, mood, spend, reps…) against a timeline and render them as
+a graph with live stats. Entries live in the existing `timeline_entries` table
+(entity `TLE`), so write operations reuse the generic CRUD. A new widget
+(`TME`, type `measurements`) reads/aggregates them.
+
+### Optional metric config
+
+`timelines.metrics` (new JSONB column, migration **V50**) defines display config
+per metric: label, unit, goal target, and which direction counts as "good".
+
+```json
+[
+  { "key": "weight", "label": "Weight", "unit": "kg", "target": 70, "direction": "down", "color": "#10B981" },
+  { "key": "mood",   "label": "Mood",    "unit": "/10", "target": 8, "direction": "up" }
+]
+```
+
+Send it via `PUT /api/v1/data/TLM/{uuid}` with body `{ "metrics": [ ... ] }`.
+When absent, the tracker auto-derives one series per `metric_key` found in
+entries (label = key, no target/direction).
+
+### GET /api/v1/widget/TME — tracker widget
+
+```
+GET /api/v1/widget/TME?field=timeline_id&value=<timeline-uuid>
+Cookie: JSESSIONID=<session>
+```
+
+Response `200 OK` (type `measurements`):
+
+```json
+{
+  "type": "measurements",
+  "title": "Health · Tracker",
+  "subtitle": "2 metrics · 9 total entries",
+  "schema": {
+    "fields": [
+      { "name": "metric_key", "label": "Metric", "type": "select", "options": ["weight", "mood"] },
+      { "name": "metric_value", "label": "Value", "type": "number", "required": true },
+      { "name": "metric_unit", "label": "Unit", "type": "text" },
+      { "name": "notes", "label": "Notes", "type": "textarea" },
+      { "name": "logged_at", "label": "Logged At", "type": "datetime" }
+    ]
+  },
+  "data": {
+    "timeline": { "id": "<timeline-uuid>", "name": "Health", "timeline_type": "goal", "color": "#4f46e5", "icon": "heart" },
+    "metrics": [
+      {
+        "key": "weight",
+        "label": "Weight",
+        "unit": "kg",
+        "target": 70,
+        "direction": "down",
+        "color": "#10B981",
+        "derived": false,
+        "stats": {
+          "count": 6,
+          "first": 75.4, "firstAt": "2026-07-01T08:00:00",
+          "last": 72.1, "lastAt": "2026-08-11T08:00:00",
+          "min": 72.1, "max": 75.4, "avg": 73.55,
+          "delta": -3.3
+        },
+        "points": [
+          { "id": "e1...", "loggedAt": "2026-07-01T08:00:00", "value": 75.4, "notes": null },
+          { "id": "e2...", "loggedAt": "2026-08-11T08:00:00", "value": 72.1, "notes": "Morning" }
+        ]
+      }
+    ]
+  },
+  "actions": [
+    { "id": "log-entry", "label": "Log Entry", "type": "modal", "config": { "icon": "plus" }, "permissions": ["ADMIN"] }
+  ],
+  "permissions": ["ADMIN"],
+  "metadata": { "entityCode": "TME", "timelineId": "<timeline-uuid>", "saveEndpoint": "/api/v1/data/TLE" }
+}
+```
+
+### Log an entry (reuse generic TLE CRUD)
+
+```
+POST /api/v1/data/TLE
+{
+  "timeline_id": "<timeline-uuid>",
+  "metric_key": "weight",
+  "metric_value": 71.6,
+  "metric_unit": "kg",
+  "notes": "Morning fasted",
+  "logged_at": "2026-08-12T07:30:00"
+}
+```
+
+Response `201 { "id": "<entry-uuid>" }`. `metric_value` is `NUMERIC(20,4)` —
+send a number. Edit via `PUT /api/v1/data/TLE/{id}`, delete via
+`DELETE /api/v1/data/TLE/{id}` (`soft: true`). `user_id` is stamped server-side.
+
+---
+
 ## 1. Data Model (summary)
 
 | Entity | Code | Table | Notes |
 |---|---|---|---|
-| Timeline | `TLM` | `timelines` | name, description, timeline_type, color, icon, is_archived |
+| Timeline | `TLM` | `timelines` | name, description, timeline_type, color, icon, metrics (JSONB config), is_archived |
 | Timeline Item | `TLI` | `timeline_items` | task/event/reminder/milestone, status, priority, scheduled_at, due_at, recurrence JSONB, reminder_enabled + reminder_offset_minutes |
 | Timeline Entry | `TLE` | `timeline_entries` | metric_key, metric_value, metric_unit, logged_at (tracking/metrics) |
+| Tracker Widget | `TME` | — | read-only widget aggregating `TLE` into chart series (see §0) |
 | Notification | `NTC` | `notifications` | type, title, body, data (action payload), read_at, snoozed_until |
 | Push Subscription | `PSU` | `push_subscriptions` | FCM registration tokens per user |
+
+`timelines.icon` is an optional **simple-icons slug** (e.g. `rocket`, `target`, `github`) chosen on the
+frontend via its icon picker or auto-picked from the timeline name/type; the backend only stores the value.
 
 All tables carry `created_at`, `updated_at`, `deleted_at`/`deleted_by` (soft delete), and
 `created_by`/`updated_by`. `user_id` is a **system field** — the client cannot set it.
@@ -155,15 +259,6 @@ Response `200 OK` (type `timeline`):
   "metadata": { "entityCode": "TLI", "timelineId": "<timeline-uuid>", "saveEndpoint": "/api/v1/data/TLI" }
 }
 ```
-
-### GET /api/v1/widget/TLM-A — Timeline analytics
-
-```
-GET /api/v1/widget/TLM-A?field=timeline_id&value=<timeline-uuid>   # optional timeline filter
-```
-
-Response `200 OK` (type `metrics`): cards for Total Items, Completed, Completion Rate %,
-Overdue, Due Today, Next 7 Days, Tracking Entries.
 
 ---
 
@@ -372,11 +467,16 @@ JSON + VAPID key are configured. Without that, in-app notifications still work e
    send `recurrence` as an object and `reminder_*` fields to express reminder intent.
 5. **Complete action** calls `POST /api/timeline/items/{id}/complete` (not generic PUT), then
    refetch the detail widget.
-6. **Unread badge**: poll `GET /api/notifications/unread-count`; toasts poll `GET /api/notifications`.
-7. **Read/snooze/complete/delete** call the matching notification endpoints; update UI
+6. **Tracker**: open a timeline detail and load `GET /api/v1/widget/TME?field=timeline_id&value=<id>`;
+   render the selected metric's `points` as a line/area graph with the `target`
+   as a reference line; log new entries via `POST /api/v1/data/TLE` and delete
+   via `DELETE /api/v1/data/TLE/{id}` then refetch `TME`. Metric display config
+   (label/unit/target/direction) is persisted via `PUT /api/v1/data/TLM/{uuid}`.
+7. **Unread badge**: poll `GET /api/notifications/unread-count`; toasts poll `GET /api/notifications`.
+8. **Read/snooze/complete/delete** call the matching notification endpoints; update UI
    optimistically and reconcile with the returned item.
-8. **Complete from notification** button: `POST /api/notifications/{id}/complete` — also refreshes
+9. **Complete from notification** button: `POST /api/notifications/{id}/complete` — also refreshes
    the timeline detail so the item shows its new state.
-9. **PWA push**: register on login/permission grant via `POST /api/notifications/subscriptions`;
-   handle `push` events with a service worker; show toast + mark-read on click.
-10. After any write, refetch the affected widget to stay consistent (same pattern as existing widgets).
+10. **PWA push**: register on login/permission grant via `POST /api/notifications/subscriptions`;
+    handle `push` events with a service worker; show toast + mark-read on click.
+11. After any write, refetch the affected widget to stay consistent (same pattern as existing widgets).
