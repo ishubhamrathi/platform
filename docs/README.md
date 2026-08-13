@@ -4,6 +4,7 @@ Shared documentation for the platform (consolidated from backend and frontend re
 
 ## Backend / API
 
+- [AMA_API.md](AMA_API.md) - Ask Me Anything widget: public ask + admin review API
 - [API_ACCESS_CONTROL.md](API_ACCESS_CONTROL.md) - API key / access rule configuration
 - [API_MIGRATION.md](API_MIGRATION.md)
 - [AUTH_INTEGRATION.md](AUTH_INTEGRATION.md)
