@@ -19,17 +19,18 @@ X-API-Key: <client-secret>
 
 The secret is issued in the **Access Control** console (Admin → Access Control →
 Clients): create a client, generate its API key, then add a per-client rule for
-`/api/stars` (path pattern `/api/stars`, methods `GET,POST`). Requests without a
-valid key are rejected with `403 Forbidden`. The key must be kept server-side in
-the consumer project's deployment environment — never expose it to browsers or
-the public bundle.
+`/api/stars` (path pattern `/api/stars`, methods `GET,POST,PATCH`). Requests
+without a valid key are rejected with `403 Forbidden`. The key must be kept
+server-side in the consumer project's deployment environment — never expose it to
+browsers or the public bundle.
 
 ## Endpoints
 
-| Method | Endpoint       | Description                                   |
-|--------|----------------|-----------------------------------------------|
-| `GET`  | `/api/stars`   | Current night sky + aggregate counters        |
-| `POST` | `/api/stars`   | Place one permanent anonymous star            |
+| Method   | Endpoint       | Description                                   |
+|----------|----------------|-----------------------------------------------|
+| `GET`    | `/api/stars`   | Current night sky + aggregate counters        |
+| `POST`   | `/api/stars`   | Place one permanent anonymous star            |
+| `PATCH`  | `/api/stars`   | Update this visitor's star                    |
 
 ---
 
@@ -48,7 +49,8 @@ Returns the full night sky (newest first) plus aggregate counters.
       "city": "Faridabad",
       "country": "India",
       "color": "#fff8e1",
-      "added_at": "2026-08-11T14:22:00Z"
+      "added_at": "2026-08-11T14:22:00Z",
+      "username": "BraveFox42"
     }
   ],
   "meta": {
@@ -69,17 +71,17 @@ Returns the full night sky (newest first) plus aggregate counters.
 - `name`, `city`, `country` — optional strings; `""` when empty.
 - `color` — one of the client palette hex values (see below), always present.
 - `added_at` — ISO 8601 UTC timestamp (render as e.g. "Aug 2026").
+- `username` — the visitor's persistent random username (e.g. "BraveFox42").
+  Resolved from the `visitor_identity` cookie. Empty string if identity not found.
 - `meta.cities` / `meta.countries` — **distinct** non-empty values.
 - `meta.visitor_has_star` — whether **this** visitor already contributed
   (drives the "one star per visitor" UI). The backend identifies the visitor by
-  IP + a short-lived `star_visitor` cookie. The frontend also blocks a second
-  submit locally after a successful POST.
+  the `visitor_identity` cookie.
 
 **Cookies**
 
-The backend issues a `star_visitor` cookie (HttpOnly, 30-day, `SameSite=Lax`)
-when absent. On subsequent requests the cookie is the primary visitor identity;
-the IP is a secondary check.
+The backend uses the `visitor_identity` cookie (HttpOnly, 365-day, `SameSite=Lax`)
+as the primary visitor identity. If absent, a new cookie is issued on first request.
 
 ---
 
@@ -108,7 +110,8 @@ Creates a new anonymous star.
     "city": "Faridabad",
     "country": "India",
     "color": "#fff8e1",
-    "added_at": "2026-08-13T09:10:00Z"
+    "added_at": "2026-08-13T09:10:00Z",
+    "username": "BraveFox42"
   },
   "meta": {
     "total_stars": 1285,
@@ -151,15 +154,60 @@ Creates a new anonymous star.
 
 ---
 
+## `PATCH /api/stars`
+
+Updates this visitor's existing star. The visitor is identified by their
+`visitor_identity` cookie. Only provided (non-null) fields are updated.
+
+**Request body** — all fields optional (at least one required)
+
+```json
+{
+  "name": "Updated Name",
+  "city": "New City",
+  "country": "New Country",
+  "color": "#c4b5fd"
+}
+```
+
+**Response `200 OK`**
+
+```json
+{
+  "id": "star_01J9Y3…",
+  "name": "Updated Name",
+  "city": "New City",
+  "country": "New Country",
+  "color": "#c4b5fd",
+  "added_at": "2026-08-13T09:10:00Z",
+  "username": "BraveFox42"
+}
+```
+
+**Response `404 Not Found`** — no star exists for this visitor
+
+```json
+{ "error": "No star found for this visitor", "hint": null }
+```
+
+**Response `400 Bad Request`** — a field exceeds its maximum length
+
+```json
+{ "error": "name must be at most 120 characters", "hint": null }
+```
+
+**Field limits & clamping** — same as `POST /api/stars` (see above).
+
+---
+
 ## Visitor identity (one star per visitor)
 
-- Identified by the **short-lived `star_visitor` cookie** (HttpOnly, 30 days,
-  `SameSite=Lax`) issued by the backend on first request. The cookie is the only
-  identity used for the one-star-per-visitor rule.
-- Raw IPs are **never stored or exposed** — only a SHA-256 hash is persisted
-  (nullable, used for per-IP rate limiting and optional geolocation; it does not
-  deduplicate visitors).
-- A second `POST` carrying the same `star_visitor` cookie returns `409`.
+- Identified by the **`visitor_identity` cookie** (HttpOnly, 365 days,
+  `SameSite=Lax`) issued by the backend on first request. The cookie is the
+  primary identity for the one-star-per-visitor rule.
+- The visitor's **random username** (e.g. "BraveFox42") is resolved from the
+  `visitor_identity` cookie via the shared identity system (`/api/identity`).
+- A second `POST` carrying the same `visitor_identity` cookie returns `409`.
 - Loopback IPs (local dev) are not IP-tracked, so multiple local browsers can
   each place a star.
 
@@ -187,12 +235,14 @@ out-of-palette colors to the nearest listed value.
   console only.
 - **`POST /api/stars` failure** → form shows generic copy ("Your star couldn't
   take off. Try again."). Never show raw status codes or URLs.
+- **`PATCH /api/stars` failure** → if 404, treat as "no star to update"; if
+  other error, show generic copy ("Could not update your star. Try again.").
 
 ## Critical rules
 
 - Authentication required via `X-API-Key` (client secret from the Access Control
   console); without a valid key the endpoint returns `403`. This is not a
-  per-visitor auth — the visitor identity (cookie/IP) still determines
+  per-visitor auth — the visitor identity (cookie) still determines
   `meta.visitor_has_star` and the one-star-per-visitor rule.
 - All responses are JSON (`Content-Type: application/json`).
 - Geolocation is best-effort: the client sends `city` / `country` hints from
