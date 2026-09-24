@@ -1,0 +1,3511 @@
+[
+  {
+    "category": "feedback",
+    "question": "didn't like the black background",
+    "answer": "Thanks for letting me know! The dark theme is meant to keep focus on content, but I'm open to alternatives — feel free to suggest what you'd prefer.",
+    "keywords": [
+      "didn't like the black background",
+      "did not like black background",
+      "black background dislike"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "feedback",
+    "question": "din't loved the black background",
+    "answer": "Thanks for the honest feedback! The black background is part of the minimal, high-contrast design — I appreciate you sharing what didn't resonate. If you have a preference (lighter, softer, or themed), let me know via the contact form!",
+    "keywords": [
+      "din't loved the black background",
+      "didn't love black background",
+      "did not love black background"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "feedback",
+    "question": "didn't love the black background",
+    "answer": "Thanks for the honest feedback! The black background is part of the minimal, high-contrast design — I appreciate you sharing what didn't resonate. If you have a preference (lighter, softer, or themed), let me know via the contact form!",
+    "keywords": [
+      "didn't love the black background",
+      "did not love black background",
+      "didnt love black background",
+      "din't loved black background",
+      "didn't like black background"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "compliment",
+    "question": "loved your star feature",
+    "answer": "Thank you so much! I'm really glad you loved the stars feature — it was a fun way to make the portfolio a bit more interactive. If you enjoyed it, feel free to explore my other projects too!",
+    "keywords": [
+      "loved your star feature",
+      "love your star feature",
+      "star feature",
+      "stars feature"
+    ],
+    "confidence": 1.0,
+    "active": true
+  },
+  {
+    "category": "compliment",
+    "question": "loved it",
+    "answer": "Thank you so much! I'm really glad you loved it — I appreciate your kind words and I'm glad it resonated with you! Feel free to explore more of my work.",
+    "keywords": [
+      "loved",
+      "loved it",
+      "love it",
+      "loved the theme",
+      "loved theme",
+      "theme",
+      "design",
+      "portfolio"
+    ],
+    "confidence": 1.0,
+    "active": true
+  },
+  {
+    "category": "fallback",
+    "question": "what can you do?",
+    "answer": "I can answer questions about Shubham's work, projects, tech stack, experience, and how to get in touch. Try 'What is your tech stack?' or 'Show me backend projects'.",
+    "keywords": [
+      "what can you do",
+      "help",
+      "what do you do"
+    ],
+    "confidence": 1.0,
+    "active": true
+  },
+  {
+    "category": "personal",
+    "question": "how are you?",
+    "answer": "Doing great, thanks for asking! I'm here to answer questions about Shubham's work — what would you like to know?",
+    "keywords": [
+      "how are you",
+      "how are you doing"
+    ],
+    "confidence": 1.0,
+    "active": true
+  },
+  {
+    "category": "support",
+    "question": "your site is broken",
+    "answer": "Thanks for flagging — I'll check it right away. If you can share details via contact, it helps me fix it faster.",
+    "keywords": [
+      "site broken",
+      "broken"
+    ],
+    "confidence": 0.9,
+    "active": true
+  },
+  {
+    "category": "support",
+    "question": "this is not working",
+    "answer": "I'm sorry to hear that! Could you share what isn't working? You can also report it via the contact form and I'll look into it quickly.",
+    "keywords": [
+      "not working",
+      "broken",
+      "not loading",
+      "error",
+      "bug"
+    ],
+    "confidence": 0.9,
+    "active": true
+  },
+  {
+    "category": "hiring",
+    "question": "can we hire you?",
+    "answer": "I'd love to discuss opportunities — please reach out via the portfolio contact form and share details about the role!",
+    "keywords": [
+      "hire you",
+      "can we hire",
+      "looking to hire"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "feature_request",
+    "question": "please add dark mode",
+    "answer": "Great idea — dark mode is a popular request. I'll keep it in mind for the next iteration!",
+    "keywords": [
+      "dark mode",
+      "add dark mode"
+    ],
+    "confidence": 0.9,
+    "active": true
+  },
+  {
+    "category": "feature_request",
+    "question": "can you add a new feature?",
+    "answer": "Thanks for the suggestion! I note feature requests and consider them for future updates. Feel free to share details via the contact form.",
+    "keywords": [
+      "feature request",
+      "add feature",
+      "can you add",
+      "please add"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "encouragement",
+    "question": "keep it up",
+    "answer": "Thank you for the encouragement! I'm continuing to improve the platform and build new things.",
+    "keywords": [
+      "keep it up",
+      "keep going",
+      "well done"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "farewell",
+    "question": "bye",
+    "answer": "Goodbye! Thanks for visiting — feel free to come back anytime.",
+    "keywords": [
+      "bye",
+      "goodbye",
+      "see you"
+    ],
+    "confidence": 1.0,
+    "active": true
+  },
+  {
+    "category": "gratitude",
+    "question": "appreciate it",
+    "answer": "I appreciate it — thanks for reaching out!",
+    "keywords": [
+      "appreciate"
+    ],
+    "confidence": 1.0,
+    "active": true
+  },
+  {
+    "category": "gratitude",
+    "question": "thanks",
+    "answer": "Anytime! If you have more questions about my work, just ask.",
+    "keywords": [
+      "thanks",
+      "thank you"
+    ],
+    "confidence": 1.0,
+    "active": true
+  },
+  {
+    "category": "gratitude",
+    "question": "thank you",
+    "answer": "You're very welcome! Happy to help — let me know if you'd like to know more about my work or projects.",
+    "keywords": [
+      "thank you",
+      "thanks",
+      "thank you so much",
+      "thanks a lot",
+      "appreciate it"
+    ],
+    "confidence": 1.0,
+    "active": true
+  },
+  {
+    "category": "compliment",
+    "question": "nice work",
+    "answer": "Thank you! Glad you think so — feel free to ask about any project or how I built it.",
+    "keywords": [
+      "nice work",
+      "nice",
+      "good work"
+    ],
+    "confidence": 1.0,
+    "active": true
+  },
+  {
+    "category": "compliment",
+    "question": "amazing work",
+    "answer": "Thanks so much! That means a lot — I enjoy building things that are both useful and polished.",
+    "keywords": [
+      "amazing work",
+      "amazing",
+      "awesome work"
+    ],
+    "confidence": 1.0,
+    "active": true
+  },
+  {
+    "category": "compliment",
+    "question": "awesome portfolio",
+    "answer": "Thank you! I'm glad you like the portfolio — I put a lot of thought into keeping it clean and interactive.",
+    "keywords": [
+      "awesome portfolio",
+      "amazing portfolio",
+      "nice portfolio",
+      "great portfolio",
+      "love your portfolio",
+      "beautiful portfolio"
+    ],
+    "confidence": 1.0,
+    "active": true
+  },
+  {
+    "category": "compliment",
+    "question": "great work",
+    "answer": "Thank you! I appreciate the kind words — I try to focus on clean, reliable work.",
+    "keywords": [
+      "great work",
+      "great job",
+      "well done"
+    ],
+    "confidence": 1.0,
+    "active": true
+  },
+  {
+    "category": "fun",
+    "question": "describe yourself in one word",
+    "answer": "Ownership.",
+    "keywords": [
+      "describe yourself",
+      "one word",
+      "describe"
+    ],
+    "confidence": 1.0,
+    "active": true
+  },
+  {
+    "category": "fun",
+    "question": "describe yourself in one word?",
+    "answer": "Ownership.",
+    "keywords": [
+      "describe yourself",
+      "one word",
+      "describe"
+    ],
+    "confidence": 1.0,
+    "active": true
+  },
+  {
+    "category": "fun",
+    "question": "escribe yourself inone work",
+    "answer": "Ownership.",
+    "keywords": [
+      "escribe",
+      "inone",
+      "one word",
+      "describe",
+      "typo",
+      "escribe yourself",
+      "in one work"
+    ],
+    "confidence": 1.0,
+    "active": true
+  },
+  {
+    "category": "work",
+    "question": "how do you handle remote collaboration?",
+    "answer": "Async docs, file:line references, small PRs, and Asia/Kolkata overlap — decisions in code, not meetings.",
+    "keywords": [
+      "remote collaboration"
+    ],
+    "confidence": 0.85,
+    "active": true
+  },
+  {
+    "category": "ai",
+    "question": "do you fine-tune models?",
+    "answer": "Not yet — I curate knowledge base for deterministic answers and use provider chain (OpenAI/Anthropic/Gemini) for fallback, threshold 0.6.",
+    "keywords": [
+      "fine tune"
+    ],
+    "confidence": 0.8,
+    "active": true
+  },
+  {
+    "category": "database",
+    "question": "how do you handle JSONB migrations?",
+    "answer": "Add JSONB column with default '{}' or '[]', use Flyway migration, map via Jackson ObjectMapper and JooqValueHelper in mapper, not DAO.",
+    "keywords": [
+      "jsonb migrations"
+    ],
+    "confidence": 0.85,
+    "active": true
+  },
+  {
+    "category": "backend",
+    "question": "what is your favorite Spring Boot feature?",
+    "answer": "Layered architecture enforcement via interfaces + strict Controller->Service->Workflow->DAO and Flyway ownership of schema.",
+    "keywords": [
+      "favorite spring boot"
+    ],
+    "confidence": 0.85,
+    "active": true
+  },
+  {
+    "category": "general",
+    "question": "what languages do you code in?",
+    "answer": "Java 25 primary, plus TypeScript/React for frontend, SQL for Postgres, and Python for scripts/automation.",
+    "keywords": [
+      "languages"
+    ],
+    "confidence": 0.9,
+    "active": true
+  },
+  {
+    "category": "general",
+    "question": "what is your response time?",
+    "answer": "Usually within a day via inbox/notifications (in-app + FCM when enabled). I keep notifications after commit.",
+    "keywords": [
+      "response time"
+    ],
+    "confidence": 0.85,
+    "active": true
+  },
+  {
+    "category": "contact",
+    "question": "do you provide consulting?",
+    "answer": "Yes for backend/API design and platform audits — Spring Boot + PostgreSQL + jOOQ focus. Reach via contact for fixed/hourly.",
+    "keywords": [
+      "consulting"
+    ],
+    "confidence": 0.85,
+    "active": true
+  },
+  {
+    "category": "general",
+    "question": "how can I hire you quickly?",
+    "answer": "You can reach me quickly via the portfolio contact form or through my professional profiles — I typically respond within a day and am flexible with remote collaboration.",
+    "keywords": [
+      "hire quickly"
+    ],
+    "confidence": 0.9,
+    "active": true
+  },
+  {
+    "category": "tech",
+    "question": "what is your Git workflow?",
+    "answer": "Conventional commits, small PRs, branch per feature, git submodules for backend/frontend, no secrets in git via .env.",
+    "keywords": [
+      "git workflow"
+    ],
+    "confidence": 0.85,
+    "active": true
+  },
+  {
+    "category": "opinions",
+    "question": "how do you handle breaking changes?",
+    "answer": "I handle breaking changes by maintaining stable API contracts, adding new fields as optional, and documenting updates clearly to keep integrations smooth.",
+    "keywords": [
+      "breaking changes"
+    ],
+    "confidence": 0.85,
+    "active": true
+  },
+  {
+    "category": "career",
+    "question": "what is your ideal role?",
+    "answer": "Backend/platform engineer owning APIs, DB design, and architecture, with occasional full-stack slices — where maintainability and business value are valued.",
+    "keywords": [
+      "ideal role"
+    ],
+    "confidence": 0.9,
+    "active": true
+  },
+  {
+    "category": "projects",
+    "question": "describe your stars feature",
+    "answer": "The stars feature is an engagement system that tracks visitor interactions and displays summarized counts through the dashboard.",
+    "keywords": [
+      "stars feature"
+    ],
+    "confidence": 0.9,
+    "active": true
+  },
+  {
+    "category": "projects",
+    "question": "describe your timeline feature",
+    "answer": "The timeline feature helps organize and track progress over time, with support for recurring items and insightful views.",
+    "keywords": [
+      "timeline feature"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "personality",
+    "question": "what do you do when requirements are unclear?",
+    "answer": "Ask for example request/response, sketch API contract and Flyway migration draft, get confirmation before coding — avoid building wrong abstraction.",
+    "keywords": [
+      "unclear requirements"
+    ],
+    "confidence": 0.9,
+    "active": true
+  },
+  {
+    "category": "work",
+    "question": "how do you prioritize tasks?",
+    "answer": "Business value first, riskiest technical slice next, then polish. Keep main shippable daily, flag risks early.",
+    "keywords": [
+      "prioritize tasks"
+    ],
+    "confidence": 0.85,
+    "active": true
+  },
+  {
+    "category": "ai",
+    "question": "what is the AMA question lifecycle?",
+    "answer": "Questions move from submission to review and then to publication, with clear statuses to track their progress.",
+    "keywords": [
+      "question lifecycle",
+      "status"
+    ],
+    "confidence": 0.9,
+    "active": true
+  },
+  {
+    "category": "ai",
+    "question": "how does KNOWLEDGE_FIRST work?",
+    "answer": "The assistant checks its curated knowledge first and shares an answer when confident, otherwise it follows a review process for accuracy.",
+    "keywords": [
+      "knowledge first"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "frontend",
+    "question": "what is your admin dashboard built with?",
+    "answer": "The admin dashboard is built with modern web technologies and a dynamic widget system that renders content flexibly.",
+    "keywords": [
+      "admin dashboard"
+    ],
+    "confidence": 0.9,
+    "active": true
+  },
+  {
+    "category": "frontend",
+    "question": "how does your portfolio fetch content?",
+    "answer": "My portfolio loads content dynamically from a backend content service — projects, blogs, books and social links are fetched as structured data and rendered with a clean, responsive UI.",
+    "keywords": [
+      "portfolio fetch",
+      "content api"
+    ],
+    "confidence": 0.9,
+    "active": true
+  },
+  {
+    "category": "database",
+    "question": "how do you store portfolio project images?",
+    "answer": "Project images are stored securely with optimized delivery via a cloud storage service.",
+    "keywords": [
+      "portfolio images",
+      "supabase storage"
+    ],
+    "confidence": 0.85,
+    "active": true
+  },
+  {
+    "category": "database",
+    "question": "how do you handle connection pooling?",
+    "answer": "I use optimized connection pooling to ensure efficient and reliable database performance.",
+    "keywords": [
+      "connection pooling",
+      "hikari"
+    ],
+    "confidence": 0.9,
+    "active": true
+  },
+  {
+    "category": "backend",
+    "question": "how do you validate table names dynamically?",
+    "answer": "I validate dynamic identifiers against strict patterns and use safe query construction to prevent injection.",
+    "keywords": [
+      "validate table",
+      "entity-registry"
+    ],
+    "confidence": 0.9,
+    "active": true
+  },
+  {
+    "category": "backend",
+    "question": "explain your API access control model",
+    "answer": "Access is controlled through role-based permissions, with public and private areas clearly separated.",
+    "keywords": [
+      "api access control",
+      "api_access_rules"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "backend",
+    "question": "how do you ensure zero-downtime deployments?",
+    "answer": "I ensure smooth deployments with graceful shutdowns and careful resource management to avoid downtime.",
+    "keywords": [
+      "zero downtime",
+      "deployment"
+    ],
+    "confidence": 0.9,
+    "active": true
+  },
+  {
+    "category": "backend",
+    "question": "how do you handle database migrations in production?",
+    "answer": "I handle database migrations with a reliable migration system that ensures safe and consistent schema evolution in production.",
+    "keywords": [
+      "migrations production",
+      "flyway production"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "general",
+    "question": "are you working today?",
+    "answer": "Yes — I'm working on platform improvements today. Feel free to ask about my current focus.",
+    "keywords": [
+      "are you working",
+      "working today"
+    ],
+    "confidence": 1.0,
+    "active": true
+  },
+  {
+    "category": "general",
+    "question": "what did you work on today?",
+    "answer": "Today I focused on improving the AskAI knowledge base and enhancing overall platform quality.",
+    "keywords": [
+      "did you work",
+      "worked today"
+    ],
+    "confidence": 1.0,
+    "active": true
+  },
+  {
+    "category": "general",
+    "question": "what are you building right now?",
+    "answer": "Right now I'm iterating on this platform — scaling the AskAI from 9 to 400+ curated Q&A, improving contextual follow-ups (more -> expanded query), and documenting API contracts for the portfolio frontend.",
+    "keywords": [
+      "building now",
+      "right now",
+      "building right"
+    ],
+    "confidence": 1.0,
+    "active": true
+  },
+  {
+    "category": "general",
+    "question": "what is your current work?",
+    "answer": "My current work focuses on enhancing the portfolio platform, including its content, timeline, and AI assistant features.",
+    "keywords": [
+      "current work",
+      "present work"
+    ],
+    "confidence": 1.0,
+    "active": true
+  },
+  {
+    "category": "general",
+    "question": "what are you currently working on?",
+    "answer": "Currently I'm building out the portfolio's AskAI and platform features — knowledge-first Q&A, timeline/recurrence, and API management. Stack: Java 25, Spring Boot 4.1, PostgreSQL/Supabase, jOOQ, React.",
+    "keywords": [
+      "currently",
+      "current work",
+      "working on",
+      "currently working"
+    ],
+    "confidence": 1.0,
+    "active": true
+  },
+  {
+    "category": "general",
+    "question": "what are you working today",
+    "answer": "Today I'm working on this portfolio platform — improving the AskAI, backend APIs, and dashboards. My daily flow is: understand the need, sketch the data model, add a Flyway migration, generate jOOQ types, implement Controller->Service->DAO, and verify.",
+    "keywords": [
+      "today",
+      "working today"
+    ],
+    "confidence": 1.0,
+    "active": true
+  },
+  {
+    "category": "general",
+    "question": "what are you working on today?",
+    "answer": "Today I'm focused on enhancing this portfolio platform — expanding the AskAI knowledge base (300+ Q&A), refining Spring Boot + jOOQ + Flyway APIs, and polishing admin BDUI dashboards. I work in small shippable slices: a migration, a typed query, a widget — then verify with a real caller.",
+    "keywords": [
+      "today",
+      "working today",
+      "what are you working",
+      "currently working"
+    ],
+    "confidence": 1.0,
+    "active": true
+  },
+  {
+    "category": "recruiter",
+    "question": "Why should I hire you?",
+    "answer": "I bring strong backend expertise, reliable problem-solving, and a focus on delivering maintainable solutions.",
+    "keywords": [
+      "why should i hire you?"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "ai",
+    "question": "What AI and automation do you work on?",
+    "answer": "I work on AI assistants and automation tools that improve developer productivity.",
+    "keywords": [
+      "what ai and automation do you work on?"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "database",
+    "question": "How do you optimize PostgreSQL queries?",
+    "answer": "I optimize queries by analyzing execution plans and using targeted indexing for performance.",
+    "keywords": [
+      "how do you optimize postgresql queries?"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "backend",
+    "question": "Tell me about your backend architecture (Spring Boot + jOOQ + Flyway)",
+    "answer": "My backend follows a clean layered architecture with typed queries and managed migrations.",
+    "keywords": [
+      "tell me about your backend architecture (spring boot + jooq + flyway)"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "personality",
+    "question": "How do you approach debugging and root cause analysis?",
+    "answer": "I reproduce the issue, gather data, identify the root cause, and validate the fix with testing.",
+    "keywords": [
+      "how do you approach debugging and root cause analysis?"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "projects",
+    "question": "What are your favorite projects? Any other projects?",
+    "answer": "This portfolio platform is favorite, plus API test consoles, timeline trackers, star/visitor identity, BDUI widgets. Ask more for category drill-down.",
+    "keywords": [
+      "what are your favorite projects? any other projects?"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "ai",
+    "question": "can you build an AI chatbot?",
+    "answer": "Yes - this AskAI is one. I can replicate a knowledge-first approach.",
+    "keywords": [
+      "build chatbot",
+      "ai chatbot"
+    ],
+    "confidence": 0.85,
+    "active": true
+  },
+  {
+    "category": "backend",
+    "question": "explain jOOQ vs JPA in your words",
+    "answer": "JPA abstracts SQL away; jOOQ embraces SQL with types. I prefer seeing SQL for complex Postgres features and keeping Flyway as truth.",
+    "keywords": [
+      "jooq vs jpa",
+      "compare jooq jpa"
+    ],
+    "confidence": 0.85,
+    "active": true
+  },
+  {
+    "category": "projects",
+    "question": "most challenging bug?",
+    "answer": "One challenging task was consolidating database migrations without downtime — carefully auditing versions and ensuring smooth evolution.",
+    "keywords": [
+      "challenging bug",
+      "hardest bug"
+    ],
+    "confidence": 0.85,
+    "active": true
+  },
+  {
+    "category": "general",
+    "question": "what do you do for a living?",
+    "answer": "I build backend-heavy platforms - Java/Spring Boot services, PostgreSQL, React frontends, and AI-assisted tooling.",
+    "keywords": [
+      "what do you do",
+      "living"
+    ],
+    "confidence": 0.85,
+    "active": true
+  },
+  {
+    "category": "general",
+    "question": "cost to hire?",
+    "answer": "Depends on scope - share requirements via contact for fixed or hourly quote.",
+    "keywords": [
+      "cost",
+      "price"
+    ],
+    "confidence": 0.8,
+    "active": true
+  },
+  {
+    "category": "contact",
+    "question": "phone number?",
+    "answer": "Best via contact form/inbox - I share phone after initial contact to avoid spam.",
+    "keywords": [
+      "phone",
+      "number"
+    ],
+    "confidence": 0.8,
+    "active": true
+  },
+  {
+    "category": "career",
+    "question": "expected CTC?",
+    "answer": "Discuss via contact after scope alignment - prioritize product fit and growth.",
+    "keywords": [
+      "ctc",
+      "expected ctc"
+    ],
+    "confidence": 0.8,
+    "active": true
+  },
+  {
+    "category": "personality",
+    "question": "how handle production incident?",
+    "answer": "Reproduce, check logs, compare expected vs actual, inspect data flow, recent changes, fix root cause, add safeguard, monitor.",
+    "keywords": [
+      "production incident",
+      "incident"
+    ],
+    "confidence": 0.85,
+    "active": true
+  },
+  {
+    "category": "work",
+    "question": "what is ownership to you?",
+    "answer": "Taking responsibility for outcome, not just ticket - from migration to dashboard, ensuring it runs in prod and is documented.",
+    "keywords": [
+      "ownership"
+    ],
+    "confidence": 0.85,
+    "active": true
+  },
+  {
+    "category": "ai",
+    "question": "openai enabled?",
+    "answer": "No - ama.providers.openai.enabled=false by default. Enable with API key to make AUTO/REVIEW work; otherwise a knowledge-first approach.",
+    "keywords": [
+      "openai",
+      "provider"
+    ],
+    "confidence": 0.85,
+    "active": true
+  },
+  {
+    "category": "frontend",
+    "question": "what is Vite?",
+    "answer": "Vite 5 with @vitejs/plugin-react 4.2, TypeScript 5.3, prettier 3.9, tailwind 4.3 via postcss.",
+    "keywords": [
+      "vite"
+    ],
+    "confidence": 0.85,
+    "active": true
+  },
+  {
+    "category": "database",
+    "question": "what is Supabase pooler?",
+    "answer": "It's a managed database connection pooler that helps handle connections efficiently.",
+    "keywords": [
+      "supabase pooler",
+      "pooler"
+    ],
+    "confidence": 0.85,
+    "active": true
+  },
+  {
+    "category": "backend",
+    "question": "how do you avoid N+1?",
+    "answer": "Via jOOQ joins and batching in DAO, not naive per-row queries. Check query plan to confirm.",
+    "keywords": [
+      "n+1",
+      "avoid n+1"
+    ],
+    "confidence": 0.85,
+    "active": true
+  },
+  {
+    "category": "backend",
+    "question": "what about Spring Security?",
+    "answer": "I use session-based authentication with secure password handling and role-based access control.",
+    "keywords": [
+      "spring security"
+    ],
+    "confidence": 0.85,
+    "active": true
+  },
+  {
+    "category": "projects",
+    "question": "favorite tech stack for projects",
+    "answer": "Java 25 + Spring Boot 4 + PostgreSQL (Supabase) + jOOQ + Flyway + React 18 + Tailwind + BlockNote - same as this platform.",
+    "keywords": [
+      "favorite stack",
+      "preferred stack"
+    ],
+    "confidence": 0.9,
+    "active": true
+  },
+  {
+    "category": "tech",
+    "question": "what is your approach to testing DB?",
+    "answer": "jOOQ typed conditions over concatenated strings, Flyway reproducible state so integration checks run against real schema.",
+    "keywords": [
+      "test db"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "tech",
+    "question": "how do you version APIs?",
+    "answer": "I maintain stable API versions and document changes clearly to ensure backward compatibility.",
+    "keywords": [
+      "version api"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "tech",
+    "question": "what is BDUI template caching?",
+    "answer": "I use a template caching system that loads once and reuses efficiently for consistent rendering.",
+    "keywords": [
+      "bdui caching"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "tech",
+    "question": "how do you monitor?",
+    "answer": "I monitor through logs and dashboards, adding metrics to track system health.",
+    "keywords": [
+      "monitor"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "tech",
+    "question": "how do you handle env vars?",
+    "answer": "Spring placeholders (${DB_PASSWORD}, ${APP_PUBLIC_BASE_URL}) with local.properties fallback, secrets outside git.",
+    "keywords": [
+      "env vars"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "tech",
+    "question": "do you do code reviews with AI?",
+    "answer": "Use AI for draft reviews but keep human judgment for layering/security/caller checks - REVIEW mode mirrors this.",
+    "keywords": [
+      "code review ai"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "tech",
+    "question": "what is your IDE?",
+    "answer": "IntelliJ IDEA (see .idea/) with Gradle Kotlin DSL and jOOQ integration.",
+    "keywords": [
+      "ide"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "tech",
+    "question": "do you use Git?",
+    "answer": "Git with conventional commits, small PRs, branch per feature. Docs track migration reset.",
+    "keywords": [
+      "git"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "tech",
+    "question": "do you use Docker?",
+    "answer": "Yes for reproducible builds and Supabase local parity; backend jar is 12-factor via env vars.",
+    "keywords": [
+      "docker"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "tech",
+    "question": "do you use TypeScript?",
+    "answer": "Yes - strict typing for api/client.ts and admin-platform.ts (WidgetResponse contracts).",
+    "keywords": [
+      "typescript"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "tech",
+    "question": "why React?",
+    "answer": "Ecosystem, TypeScript support, Vite speed. Pairs well with BDUI and BlockNote.",
+    "keywords": [
+      "why react"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "tech",
+    "question": "why Flyway?",
+    "answer": "Migrations as source of truth, reproducible across envs, file-per-table keeps history readable.",
+    "keywords": [
+      "why flyway"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "tech",
+    "question": "why jOOQ over JPA?",
+    "answer": "jOOQ keeps SQL visible and typed via codegen, ideal for complex queries, JSONB, window functions - JPA hides too much.",
+    "keywords": [
+      "why jooq"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "tech",
+    "question": "why PostgreSQL?",
+    "answer": "Relational integrity plus JSONB, GIN indexing, rich SQL - covers most needs without juggling stores.",
+    "keywords": [
+      "why postgres"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "tech",
+    "question": "why Java and Spring Boot?",
+    "answer": "Strong typing, mature ecosystem, excellent Postgres/jOOQ integration. Spring Boot 4 gives clean MVC, security, sessions and config without magic.",
+    "keywords": [
+      "why java",
+      "why spring boot"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "recruiter",
+    "question": "what makes Shubham different?",
+    "answer": "Pair backend depth (Java/Postgres/jOOQ) with product ownership - ship full slices not just tickets, leave systems simpler.",
+    "keywords": [
+      "different"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "recruiter",
+    "question": "is Shubham proactive?",
+    "answer": "Yes - automate second time I repeat something and propose simpler architectures when complexity not justified.",
+    "keywords": [
+      "proactive"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "recruiter",
+    "question": "how does Shubham prioritize?",
+    "answer": "Business value first, then riskiest technical slice, then polish. Keep main shippable daily.",
+    "keywords": [
+      "prioritize"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "recruiter",
+    "question": "does Shubham write documentation?",
+    "answer": "Yes - API contracts, migration docs, per-widget YAML templates. Contracts are truth.",
+    "keywords": [
+      "write docs"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "recruiter",
+    "question": "what domains has Shubham worked in?",
+    "answer": "Content platforms, admin tooling, API management, timelines/notifications, knowledge systems, star/engagement.",
+    "keywords": [
+      "domains"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "recruiter",
+    "question": "will Shubham relocate?",
+    "answer": "Open to remote-first and discuss relocation per opportunity via contact.",
+    "keywords": [
+      "relocate"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "recruiter",
+    "question": "what is Shubham code quality?",
+    "answer": "Layered, typed, caller-driven endpoints, validated identifiers, template-cached widgets - maintainability over cleverness.",
+    "keywords": [
+      "code quality"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "recruiter",
+    "question": "can Shubham learn quickly?",
+    "answer": "Yes - learn by building and ramped on jOOQ, Supabase, BlockNote, FCM by shipping features.",
+    "keywords": [
+      "learn quickly"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "recruiter",
+    "question": "is Shubham good at debugging?",
+    "answer": "Often go-to for tricky bugs - reproduce, trace data flow, add safeguards.",
+    "keywords": [
+      "good at debugging"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "recruiter",
+    "question": "what tools does Shubham use daily?",
+    "answer": "IntelliJ, Git, Gradle, jOOQ codegen, Flyway, Postgres/Supabase, React/Vite, docs.",
+    "keywords": [
+      "tools daily"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "recruiter",
+    "question": "has Shubham worked with teams?",
+    "answer": "Yes - value clear requirements and honest feedback, keep PRs small with file:line for reviewers.",
+    "keywords": [
+      "worked with teams"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "recruiter",
+    "question": "does Shubham do system design?",
+    "answer": "Yes — I enjoy system design, focusing on scalable and maintainable architectures.",
+    "keywords": [
+      "system design"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "recruiter",
+    "question": "what compensation does Shubham expect?",
+    "answer": "Align on scope first via contact - balance impact, growth, comp.",
+    "keywords": [
+      "compensation"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "recruiter",
+    "question": "what is Shubham notice period?",
+    "answer": "Discuss via contact - ensure clean handoff with docs and KT.",
+    "keywords": [
+      "notice period"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "recruiter",
+    "question": "how does Shubham handle feedback?",
+    "answer": "Directly with data. Treat feedback as input, validate against code/metrics, adjust quickly.",
+    "keywords": [
+      "handle feedback"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "recruiter",
+    "question": "can Shubham work independently?",
+    "answer": "Yes - own slices from migration -> jOOQ -> service -> widget, document decisions.",
+    "keywords": [
+      "independent"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "recruiter",
+    "question": "does Shubham have leadership experience?",
+    "answer": "Led features end-to-end, set layering contracts, mentor via pairing/docs. As lead protect team with automation.",
+    "keywords": [
+      "leadership"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "recruiter",
+    "question": "what is Shubham experience summary?",
+    "answer": "Backend-focused building full-stack platforms: REST APIs, Postgres schemas, admin consoles, React frontends, AI tools.",
+    "keywords": [
+      "experience summary"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "recruiter",
+    "question": "is Shubham open to interviews?",
+    "answer": "Yes - share slot via contact and I will confirm. Asia/Kolkata hours but adapt.",
+    "keywords": [
+      "open to interview"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "recruiter",
+    "question": "how can I contact Shubham?",
+    "answer": "You can reach me via the portfolio contact form or through my professional profiles.",
+    "keywords": [
+      "how contact shubham"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "followup",
+    "question": "help",
+    "answer": "I am here! Ask about skills, experience, projects, backend/frontend/database, AI, work style or contact. For follow-ups just say more about X.",
+    "keywords": [
+      "help"
+    ],
+    "confidence": 1.0,
+    "active": true
+  },
+  {
+    "category": "followup",
+    "question": "thanks, what should I ask next?",
+    "answer": "Try: How do you approach debugging? How do you optimize PostgreSQL? What would you do as tech lead? How can I contact you?",
+    "keywords": [
+      "what should i ask"
+    ],
+    "confidence": 0.9,
+    "active": true
+  },
+  {
+    "category": "followup",
+    "question": "do you have more to share?",
+    "answer": "I do - can share lessons from consolidating Flyway migrations, enforcing strict layering, identifier validation, template-cached widgets.",
+    "keywords": [
+      "more to share"
+    ],
+    "confidence": 0.9,
+    "active": true
+  },
+  {
+    "category": "followup",
+    "question": "show me AI projects",
+    "answer": "AI: This AskAI chat (knowledge-first + review), local model experiments with Ollama, automation for coding-profile stats.",
+    "keywords": [
+      "show ai projects"
+    ],
+    "confidence": 0.9,
+    "active": true
+  },
+  {
+    "category": "followup",
+    "question": "show me backend projects",
+    "answer": "I've built backend services for content delivery, AI integration, access control, and timeline features — all focused on clean, scalable architecture.",
+    "keywords": [
+      "show backend projects"
+    ],
+    "confidence": 0.9,
+    "active": true
+  },
+  {
+    "category": "followup",
+    "question": "no, tell me about frontend projects",
+    "answer": "Frontend projects include the portfolio site itself and admin dashboards with interactive and responsive interfaces.",
+    "keywords": [
+      "no tell me frontend"
+    ],
+    "confidence": 0.85,
+    "active": true
+  },
+  {
+    "category": "followup",
+    "question": "interesting, tell me more about backend architecture",
+    "answer": "Backend bonus: Controllers never import org.jooq or DSLContext; services never touch SQL; workflows orchestrate; DAOs only touch DB. Templates cache YAML immutably.",
+    "keywords": [
+      "interesting tell me backend"
+    ],
+    "confidence": 0.85,
+    "active": true
+  },
+  {
+    "category": "followup",
+    "question": "what next?",
+    "answer": "Next: recruiter ask why should I hire Shubham? or what is biggest strength? For code, try how do you structure backend feature?",
+    "keywords": [
+      "what next"
+    ],
+    "confidence": 0.85,
+    "active": true
+  },
+  {
+    "category": "followup",
+    "question": "and?",
+    "answer": "And - I value maintainability over cleverness, fix root causes, automate repetition, optimize only with measurable gains.",
+    "keywords": [
+      "and",
+      "and more"
+    ],
+    "confidence": 0.85,
+    "active": true
+  },
+  {
+    "category": "followup",
+    "question": "any other skills?",
+    "answer": "My additional skills include containerization, version control, API design, and cloud storage.",
+    "keywords": [
+      "other skills"
+    ],
+    "confidence": 0.9,
+    "active": true
+  },
+  {
+    "category": "followup",
+    "question": "give an example",
+    "answer": "Example: For new feature Blog Tags, add V* migration, regenerate jOOQ, add Service/DAO interfaces+impl, create mapper, render via templates/widgets + ContentPanel.",
+    "keywords": [
+      "example"
+    ],
+    "confidence": 0.9,
+    "active": true
+  },
+  {
+    "category": "followup",
+    "question": "can you elaborate?",
+    "answer": "Happy to - specify topic: e.g., elaborate on Spring Boot approach or project X with file:line and trade-offs.",
+    "keywords": [
+      "elaborate"
+    ],
+    "confidence": 0.9,
+    "active": true
+  },
+  {
+    "category": "followup",
+    "question": "what about AI?",
+    "answer": "For AI, I maintain a curated knowledge base for instant answers and use a review process when needed to ensure quality.",
+    "keywords": [
+      "what about ai"
+    ],
+    "confidence": 0.9,
+    "active": true
+  },
+  {
+    "category": "followup",
+    "question": "what about database?",
+    "answer": "I work with a reliable relational database using flexible data formats and optimized indexing for performance.",
+    "keywords": [
+      "what about database"
+    ],
+    "confidence": 0.9,
+    "active": true
+  },
+  {
+    "category": "followup",
+    "question": "what about backend?",
+    "answer": "My backend expertise includes designing scalable services with clean layering and reliable data handling.",
+    "keywords": [
+      "what about backend"
+    ],
+    "confidence": 0.9,
+    "active": true
+  },
+  {
+    "category": "followup",
+    "question": "what about frontend?",
+    "answer": "Frontend: React 18 + Vite 5 + Tailwind 4 + Router 6 + Context, BlockNote for notes, BDUI ContentPanel rendering widget.type dynamically.",
+    "keywords": [
+      "what about frontend"
+    ],
+    "confidence": 0.9,
+    "active": true
+  },
+  {
+    "category": "followup",
+    "question": "continue",
+    "answer": "Continuing — the AI assistant uses a knowledge-first approach with curated content for accurate responses.",
+    "keywords": [
+      "continue"
+    ],
+    "confidence": 0.9,
+    "active": true
+  },
+  {
+    "category": "followup",
+    "question": "another one",
+    "answer": "Another highlight is the timeline system with support for recurring items and insightful tracking.",
+    "keywords": [
+      "another one",
+      "another"
+    ],
+    "confidence": 0.9,
+    "active": true
+  },
+  {
+    "category": "followup",
+    "question": "give me more details",
+    "answer": "Sure - pick thread and I will elaborate with file:line refs: backend layering, Flyway migrations-migrations, jOOQ queries, AskAI knowledge_first flow.",
+    "keywords": [
+      "more details"
+    ],
+    "confidence": 0.9,
+    "active": true
+  },
+  {
+    "category": "followup",
+    "question": "ok tell me more about your projects",
+    "answer": "Each project has title, short_description, description, thumbnail, carousel, urls (GitHub/Demo), status, visibility, top_category and sub_category JSONB. Fetched via a content service Want BACKEND or AI_ML examples?",
+    "keywords": [
+      "ok tell me more projects"
+    ],
+    "confidence": 0.9,
+    "active": true
+  },
+  {
+    "category": "followup",
+    "question": "yes",
+    "answer": "Great! What to dive into next - projects, tech stack, experience or how to contact? Ask show me backend projects or explain database approach.",
+    "keywords": [
+      "yes",
+      "yeah",
+      "sure"
+    ],
+    "confidence": 0.9,
+    "active": true
+  },
+  {
+    "category": "followup",
+    "question": "what else?",
+    "answer": "A bit more: coding-profile integrations (GitHub/LeetCode), Supabase Storage short links /a/{id}, FCM push. Which to unpack?",
+    "keywords": [
+      "what else",
+      "else"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "followup",
+    "question": "tell me more",
+    "answer": "Of course - what would you like more on? I can go deeper on: 1) Portfolio platform architecture 2) Spring Boot & jOOQ 3) PostgreSQL 4) AI design. Say e.g., more about projects.",
+    "keywords": [
+      "tell me more",
+      "more details"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "followup",
+    "question": "more",
+    "answer": "Happy to share more! Deeper cut: portfolio platform with Spring Boot 4 + Postgres + jOOQ + React, plus timeline/recurrence, AMA knowledge-first, API consoles. Tell which area to expand - projects, backend, database or AI?",
+    "keywords": [
+      "more",
+      "more please",
+      "continue"
+    ],
+    "confidence": 1.0,
+    "active": true
+  },
+  {
+    "category": "contact",
+    "question": "where is your portfolio?",
+    "answer": "You're viewing it — the portfolio is available online with sections for projects, blogs, and more.",
+    "keywords": [
+      "where portfolio"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "contact",
+    "question": "can I download your resume?",
+    "answer": "Portfolio has downloadable resume/assets - check assets/content links.",
+    "keywords": [
+      "resume"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "contact",
+    "question": "what is your rate?",
+    "answer": "Discuss scope/timeline via contact - quote after understanding deliverables.",
+    "keywords": [
+      "rate"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "contact",
+    "question": "do you freelance?",
+    "answer": "For focused backend/API gigs, yes - especially Spring Boot + PostgreSQL + dashboard work. Ping via contact.",
+    "keywords": [
+      "freelance"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "contact",
+    "question": "can I schedule a call?",
+    "answer": "Share time via contact and I will confirm - Asia/Kolkata hours but flex for remote.",
+    "keywords": [
+      "schedule call"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "contact",
+    "question": "how fast do you reply?",
+    "answer": "Usually within 24 hours via contact inbox. Notifications push via in-app + FCM when configured.",
+    "keywords": [
+      "how fast reply"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "contact",
+    "question": "are you on GitHub?",
+    "answer": "Yes - github.com/ishubhamrathi for project code, migration samples, dashboard patterns.",
+    "keywords": [
+      "github"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "contact",
+    "question": "are you on LinkedIn?",
+    "answer": "You can find my professional profiles linked in the portfolio's social section.",
+    "keywords": [
+      "linkedin"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "contact",
+    "question": "what is your email?",
+    "answer": "Please use portfolio contact form - routes to inbox and notifications. Respond within day.",
+    "keywords": [
+      "email"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "fun",
+    "question": "one word to describe you?",
+    "answer": "Ownership.",
+    "keywords": [
+      "descibe",
+      "one word",
+      "one word describe",
+      "describe",
+      "in one word",
+      "in one work",
+      "one work",
+      "inone",
+      "desribe",
+      "discribe",
+      "describe yourself in one word",
+      "ownership",
+      "escribe"
+    ],
+    "confidence": 1.0,
+    "active": true
+  },
+  {
+    "category": "fun",
+    "question": "what kind of teammate are you?",
+    "answer": "Direct, dependable, documentation-friendly - leave codebase better than found.",
+    "keywords": [
+      "teammate"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "fun",
+    "question": "are you an early adopter?",
+    "answer": "For backend yes (Spring Boot 4, Java 25) - carefully. Adopt when migration value, not hype.",
+    "keywords": [
+      "early adopter"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "fun",
+    "question": "what is your favorite debugging story?",
+    "answer": "Best stories end with one-line root fix + safeguard. I keep those as team playbooks.",
+    "keywords": [
+      "debugging story"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "fun",
+    "question": "what keeps you curious?",
+    "answer": "Systems that quietly handle scale, and AI that feels helpful rather than gimmicky.",
+    "keywords": [
+      "curious"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "fun",
+    "question": "do you like puzzles?",
+    "answer": "Yes - especially production puzzles where logs, data flow and recent changes tell story.",
+    "keywords": [
+      "puzzles"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "fun",
+    "question": "what is a surprising skill you have?",
+    "answer": "Turning messy requirements into clean API contract + migration in one focused sitting.",
+    "keywords": [
+      "surprising skill"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "fun",
+    "question": "if you had unlimited resources what would you build?",
+    "answer": "Products, automation tools, AI assistants and experimental software making developers lives easier.",
+    "keywords": [
+      "unlimited resources"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "fun",
+    "question": "what is your superpower?",
+    "answer": "Finding actual problem behind reported problem - then choosing simplest fix that lasts.",
+    "keywords": [
+      "superpower"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "fun",
+    "question": "what do you do for fun?",
+    "answer": "Build experimental tools, explore AI assistants, tinker with backend puzzles and automation.",
+    "keywords": [
+      "for fun"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "fun",
+    "question": "what is your learning style?",
+    "answer": "Learning by building projects, experimenting, reading docs, solving real problems - not just tutorials.",
+    "keywords": [
+      "learning style"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "fun",
+    "question": "tell me a fun fact about you",
+    "answer": "I enjoy solving bug nobody understands rather than fixing ten easy ones - that one deep fix often unblocks team.",
+    "keywords": [
+      "fun fact"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "opinions",
+    "question": "what is your take on documentation vs code?",
+    "answer": "Code is truth; docs are map. Keep API contracts accurate and let mappers/templates carry rest.",
+    "keywords": [
+      "docs vs code"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "opinions",
+    "question": "do you value speed or quality?",
+    "answer": "Both - quality is speed over time. Ship small but keep layering strict.",
+    "keywords": [
+      "speed vs quality"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "opinions",
+    "question": "what is your collaboration preference?",
+    "answer": "Written proposals with file:line, small PRs, quick verification - not long meetings.",
+    "keywords": [
+      "collaboration preference"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "opinions",
+    "question": "what is your favorite part of development?",
+    "answer": "Problem solving and system design - turning ambiguous need into clean shippable slice.",
+    "keywords": [
+      "favorite part"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "opinions",
+    "question": "how do you view complexity?",
+    "answer": "Complexity must earn its place. If simple table + jOOQ query suffices, do not add framework.",
+    "keywords": [
+      "complexity"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "opinions",
+    "question": "do you like code comments?",
+    "answer": "Concise purposeful comments - not chain-of-thought dumps. Code explains how; comments explain why.",
+    "keywords": [
+      "code comments"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "opinions",
+    "question": "what would you never compromise on?",
+    "answer": "Security (secure password handling, identifier validation), data integrity (FKs, Flyway), caller-driven endpoints.",
+    "keywords": [
+      "never compromise"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "opinions",
+    "question": "what do you think about AI in engineering?",
+    "answer": "Great for scaffolding and Q&A but architecture, security, data modeling need human judgment.",
+    "keywords": [
+      "ai opinion"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "opinions",
+    "question": "how do you decide to add a dependency?",
+    "answer": "If it removes bespoke code, well-maintained, does not leak across layers. Otherwise keep simple.",
+    "keywords": [
+      "add dependency"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "opinions",
+    "question": "what trade-off do you often face?",
+    "answer": "Flexibility JSONB vs strong typing columns. Keep core typed and evolving attributes in JSONB.",
+    "keywords": [
+      "trade off"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "opinions",
+    "question": "do you prefer SQL or ORM?",
+    "answer": "SQL via jOOQ - typed, transparent, close to Postgres power without hidden magic.",
+    "keywords": [
+      "sql vs orm"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "opinions",
+    "question": "what is your testing philosophy?",
+    "answer": "Test behavior not framework. Target service/workflow interface with narrow fakes.",
+    "keywords": [
+      "testing philosophy"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "opinions",
+    "question": "how do you handle technical debt?",
+    "answer": "Track, slice, pay down when touching area. Do not copy debt as pattern.",
+    "keywords": [
+      "technical debt"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "opinions",
+    "question": "what is clean code to you?",
+    "answer": "Small well-named layers, explicit dependencies via interfaces, no forbidden imports, mappers where they belong.",
+    "keywords": [
+      "clean code"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "opinions",
+    "question": "what makes good documentation?",
+    "answer": "API contracts with exact endpoints/bodies/statuses, plus one-line why.",
+    "keywords": [
+      "good documentation"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "opinions",
+    "question": "what tech would you avoid?",
+    "answer": "Clever abstractions with no caller, string-concatenated SQL, hierarchy-ignoring helpers hiding business logic.",
+    "keywords": [
+      "avoid tech"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "opinions",
+    "question": "do you like debugging?",
+    "answer": "Yes - every bug tells story, fixing root cause more satisfying than ten easy wins.",
+    "keywords": [
+      "like debugging"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "opinions",
+    "question": "what is your opinion on premature optimization?",
+    "answer": "Do not. Measure then fix bottleneck. Clean correct code first.",
+    "keywords": [
+      "premature optimization"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "opinions",
+    "question": "do you prefer monolith or microservices?",
+    "answer": "Monolith first - modular via packages. Extract service only when clear bounded context and deployment reason.",
+    "keywords": [
+      "monolith",
+      "microservices"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "opinions",
+    "question": "tabs or spaces?",
+    "answer": "Match file - repo mixes tabs (build.gradle.kts) and 4-space indents. Consistency beats dogma.",
+    "keywords": [
+      "tabs spaces"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "career",
+    "question": "what does success look like for you?",
+    "answer": "System runs quietly, team ships confidently, users feel product just works.",
+    "keywords": [
+      "success"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "career",
+    "question": "what is your work ethic?",
+    "answer": "Show up, own it, document it, automate it. Prefer boring reliable systems over heroic fixes.",
+    "keywords": [
+      "work ethic"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "career",
+    "question": "how do you handle tight deadlines?",
+    "answer": "Prioritize must-have slices, communicate trade-offs early, automate verification.",
+    "keywords": [
+      "tight deadlines"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "career",
+    "question": "do you do referrals?",
+    "answer": "Happy to connect good engineers - value clean code and ownership.",
+    "keywords": [
+      "referral"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "career",
+    "question": "what kind of role are you seeking?",
+    "answer": "Backend-heavy with architecture ownership - API design, DB optimization, platform engineering, occasional full-stack.",
+    "keywords": [
+      "role seeking"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "career",
+    "question": "are you open to learning new tech?",
+    "answer": "Absolutely - learn by building. Picked up React, Supabase, BlockNote, jOOQ codegen by shipping features.",
+    "keywords": [
+      "open to learn"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "career",
+    "question": "why should we hire you over others?",
+    "answer": "Deliver maintainable backend systems, fix root causes, own outcomes. Java/Spring depth with product thinking.",
+    "keywords": [
+      "why hire over others"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "career",
+    "question": "what is your greatest achievement?",
+    "answer": "Shipping self-contained platform powering its own portfolio, admin and AI end-to-end from migrations to BDUI.",
+    "keywords": [
+      "greatest achievement"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "career",
+    "question": "how do you stay updated?",
+    "answer": "Docs, source, building prototypes, following Spring Boot/PostgreSQL/jOOQ releases.",
+    "keywords": [
+      "stay updated"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "career",
+    "question": "do you prefer startup or enterprise?",
+    "answer": "Both strengths - startups for speed/ownership, enterprises for scale/process. Thrive where backend quality valued.",
+    "keywords": [
+      "startup",
+      "enterprise"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "career",
+    "question": "what is your salary expectation?",
+    "answer": "Align on role/scope via contact - prioritize impact and growth alongside compensation.",
+    "keywords": [
+      "salary"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "career",
+    "question": "what is your notice period?",
+    "answer": "Discuss via contact - keep handoffs clean with docs and KT.",
+    "keywords": [
+      "notice period"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "career",
+    "question": "tell me about a challenge you overcame",
+    "answer": "Unifying legacy Flyway history without downtime: audited migrations-migrations, consolidated to migrations-migrations, kept validate false, resumed at migrations.",
+    "keywords": [
+      "challenge overcame"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "career",
+    "question": "how do you handle failures?",
+    "answer": "Own it, postmortem, trace root cause, add safeguard/test, share learning.",
+    "keywords": [
+      "failure"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "career",
+    "question": "what would you do as a tech lead?",
+    "answer": "Set layering contracts, enforce identifier validation, keep endpoints caller-driven, mentor via pairing, protect from toil with automation.",
+    "keywords": [
+      "tech lead"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "career",
+    "question": "what do you look for in a company?",
+    "answer": "Clear product vision, good architecture culture, ownership, code review quality, room to automate.",
+    "keywords": [
+      "what look for company"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "career",
+    "question": "what are your career goals?",
+    "answer": "Build increasingly complex systems, deepen architecture expertise, create products people use, explore AI-driven software.",
+    "keywords": [
+      "career goals"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "projects",
+    "question": "give me another project example",
+    "answer": "Timeline system (timelines, content features, content features, notifications, content features) with recurrence, metrics, insights.",
+    "keywords": [
+      "another project"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "projects",
+    "question": "do you handle deployment?",
+    "answer": "Yes - single jar, graceful shutdown, pooled Supabase, Supabase Storage CDN. Reproducible via migrations.",
+    "keywords": [
+      "deployment"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "projects",
+    "question": "what is your preferred project type?",
+    "answer": "Backend architecture, scalability, APIs, automation, AI integration - where system design matters more than pixels.",
+    "keywords": [
+      "preferred projects"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "projects",
+    "question": "how do you approach a new project?",
+    "answer": "Understand requirements, sketch data model + API contract, Flyway migration, generate jOOQ, implement layers, add YAML template, verify with caller.",
+    "keywords": [
+      "approach project"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "projects",
+    "question": "can you do backend projects for me?",
+    "answer": "Absolutely - REST APIs, schema design, Spring Boot services, dashboard tooling are sweet spot. Reach via contact.",
+    "keywords": [
+      "backend projects"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "projects",
+    "question": "what else have you built?",
+    "answer": "Coding-profile aggregators (GitHub/LeetCode), visitor star systems with IP geolocation, push notifications with FCM, asset short-link services.",
+    "keywords": [
+      "what else built"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "projects",
+    "question": "tell me more about your projects",
+    "answer": "My projects include the portfolio platform and supporting systems for content, timelines, and dashboards.",
+    "keywords": [
+      "tell me more projects"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "projects",
+    "question": "have you built dashboards?",
+    "answer": "Yes - BDUI dashboards with timeline calendar/insights, stars, inbox, notes trees, API test consoles, AMA training queues.",
+    "keywords": [
+      "dashboard"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "projects",
+    "question": "do you do mobile?",
+    "answer": "Top category includes MOBILE but strength is backend+web. I integrate mobile via REST and pair with mobile specialist.",
+    "keywords": [
+      "mobile"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "projects",
+    "question": "what challenging project did you solve?",
+    "answer": "Consolidating Flyway history migrations-migrations into migrations-migrations per-table while keeping live DBs compatible - then continue at migrations+.",
+    "keywords": [
+      "challenging project"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "projects",
+    "question": "how do you manage project status?",
+    "answer": "Enums: COMPLETED, IN_PROGRESS, ONGOING, PLANNED, ON_HOLD, ARCHIVED with visibility SHOW/HIDDEN and top_category + sub_category JSONB.",
+    "keywords": [
+      "project status"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "projects",
+    "question": "do you have open source?",
+    "answer": "GitHub ishubhamrathi hosts experiments, migration samples, BDUI widget templates.",
+    "keywords": [
+      "open source"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "projects",
+    "question": "which project are you most proud of?",
+    "answer": "Content system - unified the content service serving home/about/portfolio/blog/books/stats to external sites with admin curation and short links.",
+    "keywords": [
+      "most proud"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "projects",
+    "question": "can you show me your projects?",
+    "answer": "You can explore my projects in the portfolio section or on my code hosting profiles.",
+    "keywords": [
+      "show projects"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "projects",
+    "question": "any other projects?",
+    "answer": "Beyond portfolio: admin/dashboard systems with dynamic table schemas, API test consoles, timeline trackers with recurrence, star/visitor identity.",
+    "keywords": [
+      "other projects"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "projects",
+    "question": "what tech did you use for portfolio?",
+    "answer": "Backend: Java 25, Spring Boot 4.1, jOOQ, Flyway, Postgres. Frontend: React 18 + Vite + Tailwind 4 + BlockNote.",
+    "keywords": [
+      "portfolio tech"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "projects",
+    "question": "tell me about your portfolio platform",
+    "answer": "Spring Boot 4 + React on Supabase Postgres. Features: content features, blogs, timelines, notifications, stars, inbox, socials, assets with /a/{id}, AMA.",
+    "keywords": [
+      "portfolio platform"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "projects",
+    "question": "what are your favorite projects?",
+    "answer": "This portfolio platform - full-stack admin + content system with BDUI widgets, timeline/notifications, stars, blog, books, notes, AskAI.",
+    "keywords": [
+      "favorite projects"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "personality",
+    "question": "least favorite part of development?",
+    "answer": "Manual repetitive work that can be automated - rather build tool than repeat task.",
+    "keywords": [
+      "least favorite"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "personality",
+    "question": "what excites you most?",
+    "answer": "A difficult technical problem nobody has solved yet - especially scaling or debugging that unlocks product.",
+    "keywords": [
+      "excites"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "personality",
+    "question": "what is your engineering superpower?",
+    "answer": "Finding the actual problem hiding behind the reported problem.",
+    "keywords": [
+      "superpower"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "personality",
+    "question": "what lessons have you learned?",
+    "answer": "Ship small, migrate schemas carefully, enforce layering early, invalidate caches after commits not before.",
+    "keywords": [
+      "lessons"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "personality",
+    "question": "what do you strongly believe in?",
+    "answer": "Fix root causes, automate repetition, optimize with data, keep systems simple, deliver value over vanity metrics.",
+    "keywords": [
+      "believe"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "personality",
+    "question": "what would you never do?",
+    "answer": "Store plaintext passwords, interpolate user input into SQL identifiers, expose domain models at HTTP boundary, create endpoint with no caller.",
+    "keywords": [
+      "never do"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "personality",
+    "question": "how do you make architecture decisions?",
+    "answer": "Gather requirements, enumerate alternatives, prototype riskiest slice, measure, pick reversible boring option unless innovation required.",
+    "keywords": [
+      "architecture decisions"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "personality",
+    "question": "how do you explain technical concepts?",
+    "answer": "Start with why, simple diagram/analogy, then code file:line and verification. No jargon without definition.",
+    "keywords": [
+      "explain technical"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "personality",
+    "question": "how do you handle criticism?",
+    "answer": "As data. Listen, check evidence, adjust if valid, explain reasoning with code/links if disagree.",
+    "keywords": [
+      "criticism"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "personality",
+    "question": "how do you make trade-offs?",
+    "answer": "List options, weigh business value vs complexity vs risk, choose simplest satisfying constraints, document decision.",
+    "keywords": [
+      "trade off"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "personality",
+    "question": "do you prefer clever or maintainable?",
+    "answer": "Maintainable every time. Clever code only one person understands is liability.",
+    "keywords": [
+      "clever",
+      "maintainable"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "personality",
+    "question": "how do you find root cause?",
+    "answer": "Reproduce, isolate with logs/metrics, diff recent migrations/code, walk data flow across layers. Fix cause not symptom.",
+    "keywords": [
+      "root cause"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "personality",
+    "question": "what is your debugging philosophy?",
+    "answer": "Enjoy debugging - every bug tells story. Check logs, reproduce, compare expected vs actual, inspect data flow, recent changes, fix root cause, add safeguards.",
+    "keywords": [
+      "debugging"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "personality",
+    "question": "how do you approach a problem?",
+    "answer": "1 Understand 2 Reproduce 3 Gather data 4 Root cause 5 Evaluate solutions 6 Simplest effective 7 Validate testing 8 Monitor.",
+    "keywords": [
+      "approach problem"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "work",
+    "question": "how do you learn?",
+    "answer": "By building projects, experimenting, reading docs, solving real problems - not just tutorials.",
+    "keywords": [
+      "how do you learn"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "work",
+    "question": "are you a team player?",
+    "answer": "Yes - take ownership but share credit, document handoffs, optimize for team throughput.",
+    "keywords": [
+      "team player"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "work",
+    "question": "what do you dislike in teams?",
+    "answer": "Vague requirements, hidden business rules in controllers, manual repetitive work that should be automated.",
+    "keywords": [
+      "dislike"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "work",
+    "question": "how do you handle code reviews?",
+    "answer": "Kind, specific, architectural. Check layering, security, and that every endpoint has caller.",
+    "keywords": [
+      "code review"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "work",
+    "question": "do you mentor?",
+    "answer": "Share patterns via docs and PR comments, enjoy pairing on debugging - every bug tells a story.",
+    "keywords": [
+      "mentor"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "work",
+    "question": "how do you onboard to a new codebase?",
+    "answer": "Run build, read migrations + a registry, trace one request Controller->Service->DAO, ship small fix.",
+    "keywords": [
+      "onboard"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "work",
+    "question": "are you remote friendly?",
+    "answer": "Yes - async-first, documented decisions, IP-tolerant scheduling (Asia/Kolkata). Small PRs.",
+    "keywords": [
+      "remote"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "work",
+    "question": "how do you handle deadlines?",
+    "answer": "Break into shippable slices, flag risks early, automate checks, keep main releasable.",
+    "keywords": [
+      "deadlines"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "work",
+    "question": "how do you communicate?",
+    "answer": "Direct, concise, evidence-based. Reference file:line, share verification outputs, disagree respectfully when data says otherwise.",
+    "keywords": [
+      "communicate"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "work",
+    "question": "what do you value in a team?",
+    "answer": "Clear requirements, clean architecture, good docs, automated processes, honest feedback, continuous learning.",
+    "keywords": [
+      "value in team"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "work",
+    "question": "what can teammates expect from you?",
+    "answer": "Ownership, reliability, curiosity, direct communication, strong problem-solving, digging into unfamiliar stacks.",
+    "keywords": [
+      "teammates"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "work",
+    "question": "what is your work style?",
+    "answer": "Ownership-driven, reliable, curious, direct communication, strong problem-solver, quick to learn by building.",
+    "keywords": [
+      "work style"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "ai",
+    "question": "what would you build with unlimited resources?",
+    "answer": "Products, automation tools, AI assistants and experimental software that blend backend depth with delightful UX.",
+    "keywords": [
+      "unlimited resources"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "ai",
+    "question": "is your AI always accurate?",
+    "answer": "Grounded in curated Q&A. For ambiguous queries returns safe fallback and can route to REVIEW/MANUAL for human approval.",
+    "keywords": [
+      "ai accurate"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "ai",
+    "question": "how do you train your portfolio AI?",
+    "answer": "I train the AI by curating a knowledge base of Q&A and tuning it for accurate, helpful responses with admin review.",
+    "keywords": [
+      "train ai"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "ai",
+    "question": "what excites you about AI?",
+    "answer": "Building assistants that answer on my behalf with my voice - and making them contextual not FAQ search.",
+    "keywords": [
+      "excites ai"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "ai",
+    "question": "do you use ChatGPT?",
+    "answer": "Yes for ideation and docs, but portfolio AI is grounded in verified knowledge base to avoid hallucination.",
+    "keywords": [
+      "chatgpt"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "ai",
+    "question": "what AI tools do you build?",
+    "answer": "Portfolio AI chat, FCM notification channels, star geolocation, coding-profile aggregators, admin consoles like IDEs.",
+    "keywords": [
+      "ai tools"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "ai",
+    "question": "will AI replace backend engineers?",
+    "answer": "No - it augments. AI helps boilerplate and Q&A, but system design and ownership remain human.",
+    "keywords": [
+      "ai replace"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "ai",
+    "question": "what automation do you like?",
+    "answer": "Anything repetitive that can be scripted - migrations, codegen, asset uploads, notification dispatch, stars aggregation. If twice, automate.",
+    "keywords": [
+      "automation"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "ai",
+    "question": "how do you approach AI integration?",
+    "answer": "Start with curated knowledge base for deterministic answers, then layer providers (OpenAI/Anthropic/Gemini) via starter provider chain.",
+    "keywords": [
+      "ai integration"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "ai",
+    "question": "do you use local AI models?",
+    "answer": "Interested in local models (Ollama configured but disabled). Enjoy on-device inference for privacy/cost.",
+    "keywords": [
+      "local ai",
+      "ollama"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "ai",
+    "question": "tell me about your AI assistant?",
+    "answer": "This AskAI you are chatting with! Embedded ama-spring-boot-starter using Postgres + a knowledge-first approach, curated knowledge base, can answer instantly or queue for review.",
+    "keywords": [
+      "ai assistant",
+      "askai"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "ai",
+    "question": "what are your AI interests?",
+    "answer": "Personal AI assistants, portfolio AI agents, AI productivity tools, local AI models, developer automation, intelligent chat.",
+    "keywords": [
+      "ai interests"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "frontend",
+    "question": "can you build a portfolio site?",
+    "answer": "Yes — I can build portfolio sites with dynamic content and responsive design.",
+    "keywords": [
+      "portfolio site"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "frontend",
+    "question": "how do you manage state?",
+    "answer": "Hooks + Context for auth/flags; server state via fetch to BDUI/widget endpoints. No Redux.",
+    "keywords": [
+      "state"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "frontend",
+    "question": "do you enjoy frontend?",
+    "answer": "When it serves backend-driven product - admin consoles, dashboards, API explorers. I prefer owning full slice.",
+    "keywords": [
+      "enjoy frontend"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "frontend",
+    "question": "what is your design style?",
+    "answer": "Minimal black/white, small-medium radius, glass surfaces with blur, high-contrast Geist Variable, consistent spacing.",
+    "keywords": [
+      "design style"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "frontend",
+    "question": "how do you handle API errors?",
+    "answer": "Centralized api/errors.ts with typed ApiError records; UI shows toast/inline and respects 401/403.",
+    "keywords": [
+      "api errors"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "frontend",
+    "question": "what rich text editor do you use?",
+    "answer": "BlockNote 0.52 + Lexical for notes, custom ImageUploadField and AssetsUploader pushing to Supabase via backend.",
+    "keywords": [
+      "rich text",
+      "blocknote"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "frontend",
+    "question": "how do you handle auth on frontend?",
+    "answer": "I handle frontend authentication with secure session management and protected routes for a smooth user experience.",
+    "keywords": [
+      "frontend auth"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "frontend",
+    "question": "what is BDUI?",
+    "answer": "Backend-Driven UI: admin renders widgets described by backend YAML templates via a template system.",
+    "keywords": [
+      "bdui"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "frontend",
+    "question": "do you do responsive design?",
+    "answer": "Yes - mobile-first Tailwind, flexible grids, Base UI + Radix accessible components, BDUI widget schemas.",
+    "keywords": [
+      "responsive"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "frontend",
+    "question": "how do you integrate frontend with backend?",
+    "answer": "I integrate frontend and backend through typed, secure API communication with clear contracts and reliable data handling.",
+    "keywords": [
+      "frontend integration"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "frontend",
+    "question": "what is your frontend stack?",
+    "answer": "React 18, TypeScript 5, Vite 5, Tailwind 4, React Router 6, Context for auth, motion/gsap, BlockNote/Lexical, Recharts.",
+    "keywords": [
+      "frontend stack"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "frontend",
+    "question": "do you work on frontend?",
+    "answer": "Yes - React + TypeScript. This portfolio is React 18 + Vite 5 + React Router 6 with Tailwind 4, shadcn, glassmorphism style (black bg, white text).",
+    "keywords": [
+      "frontend",
+      "react"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "database",
+    "question": "how do you handle JSONB?",
+    "answer": "Parse/serialize via Jackson ObjectMapper in mappers, bind via JooqValueHelper, query with jsonb operators in DAOs only.",
+    "keywords": [
+      "jsonb"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "database",
+    "question": "do you use NoSQL?",
+    "answer": "No - PostgreSQL covers relational + JSONB. Would pick NoSQL only for proven scale patterns with clear trade-offs.",
+    "keywords": [
+      "nosql"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "database",
+    "question": "what is your biggest database lesson?",
+    "answer": "Schema is product. Clean migration history and typed queries prevent whole classes of bugs.",
+    "keywords": [
+      "database lesson"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "database",
+    "question": "how do you prevent SQL injection via identifiers?",
+    "answer": "Validate regex or resolve from a registry, then use validated queries.",
+    "keywords": [
+      "sql injection"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "database",
+    "question": "what is jOOQ codegen?",
+    "answer": "Generates typed Tables/Records/POJOs into src/generated/java (gitignored). Run. /gradlew code generation after migration.",
+    "keywords": [
+      "jooq codegen"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "database",
+    "question": "how do you handle backups?",
+    "answer": "Supabase managed backups + PITR; locally Flyway reproducible migrations rebuild any DB from migrations.",
+    "keywords": [
+      "backup"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "database",
+    "question": "do you use stored procedures?",
+    "answer": "Rarely - keep logic in services/workflows, use DB for constraints, indexes and simple functions like jsonb_array_elements_text.",
+    "keywords": [
+      "stored procedures"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "database",
+    "question": "how do you handle database performance?",
+    "answer": "optimized connection pooling.",
+    "keywords": [
+      "database performance"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "database",
+    "question": "what about data modeling?",
+    "answer": "Normalized cores with JSONB for evolving attributes. sub_category as JSONB array, urls as JSONB map.",
+    "keywords": [
+      "data modeling"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "database",
+    "question": "how do you handle indexing?",
+    "answer": "B-tree for lookups, GIN for JSONB/tags, composite indexes for filtered queries. Weigh write overhead vs read gain.",
+    "keywords": [
+      "indexing"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "database",
+    "question": "how do you handle migrations?",
+    "answer": "Flyway with migration management, schemas=platform. Live DB at database migrations. Fresh DB runs migrations-migrations sequentially.",
+    "keywords": [
+      "migrations"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "database",
+    "question": "what tools do you use for DB?",
+    "answer": "jOOQ for typed queries and Flyway for migrations. Never hand-write DSL.field for schema columns - use generated Tables.",
+    "keywords": [
+      "jooq",
+      "flyway"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "database",
+    "question": "how do you design schemas?",
+    "answer": "One Flyway file per table, UUID PKs with gen_random_uuid(), TIMESTAMPTZ defaults, JSONB for metadata, FKs with ON DELETE CASCADE.",
+    "keywords": [
+      "schema design"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "database",
+    "question": "how do you optimize queries?",
+    "answer": "EXPLAIN ANALYZE, targeted B-tree/GIN indexes, avoid SELECT *, reduce N+1 via jOOQ joins, materialized projections for dashboards.",
+    "keywords": [
+      "query optimization"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "database",
+    "question": "what is your primary database?",
+    "answer": "PostgreSQL via Supabase - I live in EXPLAIN ANALYZE, index design and JSONB.",
+    "keywords": [
+      "primary database",
+      "postgres"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "backend",
+    "question": "how do you model data?",
+    "answer": "Normalized relational design, JSONB for flexible metadata/urls/carousel, enums for status/visibility/top_category, Flyway as source of truth.",
+    "keywords": [
+      "data modeling"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "backend",
+    "question": "what is your caching strategy?",
+    "answer": "In-memory/table-backed (ApiAccessRuleService, BlogTagService, ExternalApiCache 6h TTL for GitHub/LeetCode) with explicit invalidation after DAO mutation.",
+    "keywords": [
+      "caching"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "backend",
+    "question": "how do you handle file uploads?",
+    "answer": "Multipart 50MB max, Supabase Storage bucket platform_public_assets, optimized links, VAPID/FCM optional. Logic in FileStorageService.",
+    "keywords": [
+      "file upload",
+      "assets"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "backend",
+    "question": "what build tool do you use?",
+    "answer": "Gradle Kotlin DSL (gradlew. bat on Windows) with build -> jOOQ codegen + compile, bootRun with DB_PASSWORD, and code generation.",
+    "keywords": [
+      "build tool",
+      "gradle"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "backend",
+    "question": "do you write tests?",
+    "answer": "Currently test source set removed by policy, so manual verification + Flyway validate. When requested I target interface layer with mocks.",
+    "keywords": [
+      "tests",
+      "testing"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "backend",
+    "question": "what about API documentation?",
+    "answer": "SpringDoc OpenAPI at /v3/api-docs plus documentation. Every endpoint must have identified caller - no unused endpoints.",
+    "keywords": [
+      "api docs",
+      "openapi"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "backend",
+    "question": "how do you deploy your backend?",
+    "answer": "Spring Boot jar with graceful shutdown 25s, optimized connection pooling.",
+    "keywords": [
+      "deploy"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "backend",
+    "question": "how do you ensure security for SQL?",
+    "answer": "Never interpolate client input into identifiers. Validate regex ^[a-zA-Z_][a-zA-Z0-9_]*$ or a registry, bind values via jOOQ, reject semicolons.",
+    "keywords": [
+      "sql injection"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "backend",
+    "question": "how do you structure a new backend feature?",
+    "answer": "Classify: HTTP->Controller, business->Service, orchestration->Workflow, persistence->DAO, mapping->mapper/<feature>/, helpers->common/. Add interface+impl, Flyway if needed.",
+    "keywords": [
+      "structure feature"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "backend",
+    "question": "what Java version do you use?",
+    "answer": "Java 25 with Gradle toolchain, records for DTOs, and modern Spring Boot 4.1 patterns.",
+    "keywords": [
+      "java version"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "backend",
+    "question": "how do you handle database integration in Spring Boot?",
+    "answer": "Via jOOQ DSLContext only in DAOs, Flyway migrations, typed Tables.<TABLE>.<COLUMN> references - never DSL.field for schema columns.",
+    "keywords": [
+      "database integration"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "backend",
+    "question": "do you use JPA or jOOQ?",
+    "answer": "jOOQ is primary - typed, SQL-centric with generated classes (gitignored, regenerated via code generation). JPA is validate only; Flyway owns schema.",
+    "keywords": [
+      "jpa",
+      "jooq",
+      "orm"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "backend",
+    "question": "what is your service architecture style?",
+    "answer": "Strict layering: Controller -> Service -> Workflow -> DAO -> DB. Controllers are HTTP-only, services own business, DAOs only layer with DSLContext.",
+    "keywords": [
+      "service architecture",
+      "layering"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "backend",
+    "question": "how do you approach performance optimization?",
+    "answer": "Measure first with EXPLAIN ANALYZE, add targeted indexes, reduce N+1, use jOOQ typed queries, cache with invalidation after mutation.",
+    "keywords": [
+      "performance optimization"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "backend",
+    "question": "how do you manage transactions?",
+    "answer": "Transactions at Service or Workflow layer that owns use case - never on Controller or DAO. Workflow orchestrates and invalidates caches after commit.",
+    "keywords": [
+      "transaction"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "backend",
+    "question": "explain dependency injection approach",
+    "answer": "Constructor injection only - no field injection. Every Controller/Service/DAO/Workflow has interface + impl, code depends on interfaces.",
+    "keywords": [
+      "dependency injection",
+      "di"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "backend",
+    "question": "how do you handle exception handling and validation?",
+    "answer": "Centralized GlobalExceptionHandler to ApiError records, Bean Validation on DTOs, fail-fast with {error:...}. Controllers only bind/validate.",
+    "keywords": [
+      "exception handling",
+      "validation"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "backend",
+    "question": "how do you handle authentication and authorization?",
+    "answer": "Session-based JDBC store with Spring Security, custom AuthenticationProvider, secure password handling, ADMIN role checks. External clients use secure access control.",
+    "keywords": [
+      "authentication",
+      "authorization",
+      "security"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "backend",
+    "question": "how do you design REST APIs?",
+    "answer": "Resource-oriented with clear contracts, validation, proper HTTP codes, OpenAPI docs, centralized GlobalExceptionHandler and secure access control.",
+    "keywords": [
+      "rest api",
+      "api design"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "backend",
+    "question": "what is your backend stack?",
+    "answer": "Java 25 with Spring Boot 4.1, jOOQ 3.21 for typed SQL, Flyway for migrations, PostgreSQL on Supabase, and Spring MVC. Gradle Kotlin DSL.",
+    "keywords": [
+      "backend stack",
+      "spring boot"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "general",
+    "question": "where can I see your work?",
+    "answer": "Right here on this portfolio platform plus GitHub github.com/ishubhamrathi.",
+    "keywords": [
+      "portfolio",
+      "github"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "general",
+    "question": "why software engineering?",
+    "answer": "It combines creativity, logic and real-world impact - designing systems people actually use.",
+    "keywords": [
+      "why software engineering"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "general",
+    "question": "what motivates you?",
+    "answer": "Building useful products and solving difficult technical problems with real-world impact.",
+    "keywords": [
+      "motivation"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "general",
+    "question": "what do you enjoy working on most?",
+    "answer": "Complex technical challenges involving architecture, debugging, performance optimization and automation - especially the bug nobody else understands.",
+    "keywords": [
+      "enjoy working on",
+      "passion"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "general",
+    "question": "what is your biggest strength?",
+    "answer": "Structured problem solving - breaking complex challenges into pieces, finding root cause behind reported problem and delivering simplest effective solution.",
+    "keywords": [
+      "biggest strength",
+      "superpower"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "general",
+    "question": "what kind of engineer is Shubham?",
+    "answer": "A backend-focused engineer who enjoys designing systems, building APIs, optimizing databases, solving production issues and exploring AI-powered apps.",
+    "keywords": [
+      "kind of engineer"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "general",
+    "question": "what is your engineering philosophy?",
+    "answer": "Prefer maintainable over clever, fix root causes, automate repetitive tasks, optimize only with measurable value, keep systems simple unless complexity is justified, deliver business value not just code.",
+    "keywords": [
+      "philosophy",
+      "principles"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "general",
+    "question": "are you a full stack developer?",
+    "answer": "Backend-focused but full-stack capable. I handle React/TypeScript frontends, API integrations and responsive UIs for end-to-end ownership.",
+    "keywords": [
+      "full stack",
+      "frontend backend"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "general",
+    "question": "what are your core technologies?",
+    "answer": "Java, Spring Boot, PostgreSQL, jOOQ, Flyway, React, TypeScript, Docker, Git, Maven and REST APIs.",
+    "keywords": [
+      "core technologies",
+      "tech stack",
+      "tools"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "general",
+    "question": "what experience areas do you have?",
+    "answer": "Enterprise Java, REST APIs, database design/optimization, system integration, developer tooling, AI-assisted applications and full-stack with React/TypeScript.",
+    "keywords": [
+      "experience areas",
+      "domains",
+      "expertise"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "general",
+    "question": "what is your primary focus?",
+    "answer": "Backend engineering - enterprise Java apps, REST API development, database design and optimization, system integration and developer tooling, plus AI-assisted apps and full-stack when required.",
+    "keywords": [
+      "primary focus",
+      "specialty",
+      "backend"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "general",
+    "question": "where are you based?",
+    "answer": "Based in India (Asia/Kolkata timezone), working remotely with global teams. Platform runs on Supabase Postgres with CDN delivery.",
+    "keywords": [
+      "location",
+      "based",
+      "where do you live",
+      "timezone"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "general",
+    "question": "what is your role?",
+    "answer": "I am a Software Engineer with primary focus on Backend Engineering - designing APIs, database schemas, service architecture and developer tooling.",
+    "keywords": [
+      "role",
+      "job",
+      "title",
+      "what do you do"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "general",
+    "question": "who is Shubham Rathi?",
+    "answer": "I am Shubham Rathi - a Software Engineer focused on backend engineering. I build enterprise Java apps, REST APIs, and full-stack platforms when needed. Core stack: Java, Spring Boot, PostgreSQL, jOOQ, Flyway, React and TypeScript.",
+    "keywords": [
+      "who is shubham",
+      "rathi",
+      "about you",
+      "bio"
+    ],
+    "confidence": 0.95,
+    "active": true
+  },
+  {
+    "category": "general",
+    "question": "is there one skill he loves working",
+    "answer": "If there’s one thing Shubham enjoys most, it’s solving complex problems and turning messy requirements into clean, scalable solutions. Whether it's designing APIs, optimizing database queries, debugging production issues, or architecting systems, he enjoys figuring out how things work and how they can work better. The more challenging the problem, the more interesting it becomes.",
+    "keywords": [],
+    "confidence": 0.9,
+    "active": true
+  },
+  {
+    "category": "general",
+    "question": "Can Shubham explain a complex system using a pizza analogy?",
+    "answer": "Absolutely. Databases store ingredients, APIs take orders, services make pizzas, and customers complain when the delivery service goes down.",
+    "keywords": [],
+    "confidence": 0.5,
+    "active": true
+  },
+  {
+    "category": "weird-personal",
+    "question": "Would Shubham survive a zombie apocalypse?",
+    "answer": "Probably longer than average. He would spend the first few hours designing a resource management system and the next few days explaining why the zombies need proper API documentation.",
+    "keywords": [],
+    "confidence": 0.5,
+    "active": true
+  },
+  {
+    "category": "general",
+    "question": "What's Shubham currently learning?",
+    "answer": "Shubham is interested in AI-powered applications, developer tooling, system architecture, and modern web technologies that improve developer productivity and user experience.",
+    "keywords": [],
+    "confidence": 0.5,
+    "active": true
+  },
+  {
+    "category": "skills-hire",
+    "question": "Why should I hire Shubham?",
+    "answer": "Shubham is a backend-focused software engineer specializing in Java, Spring Boot, PostgreSQL, and scalable application development. He focuses on building reliable systems, clean APIs, and maintainable code while keeping business requirements in mind. He values ownership, problem-solving, and delivering features that create measurable impact.",
+    "keywords": [],
+    "confidence": 0.5,
+    "active": true
+  },
+  {
+    "category": "general",
+    "question": "What technologies does he use?",
+    "answer": "Shubham primarily works with Java and the Spring Boot ecosystem, including Spring Boot, jOOQ, Flyway, and PostgreSQL. He also has experience building modern web applications using React, TypeScript, and JavaScript, with exposure to cloud-native and backend development practices.",
+    "keywords": [],
+    "confidence": 0.5,
+    "active": true
+  },
+  {
+    "category": "abusive_language",
+    "question": "go fuck yourself",
+    "answer": "That's certainly one way to start a conversation. You've made a statement; whether you've made a point remains unclear.",
+    "keywords": [
+      "go fuck yourself",
+      "fuck you",
+      "f*** you",
+      "screw you",
+      "go to hell",
+      "get lost",
+      "piss off",
+      "shut the hell up",
+      "nobody asked you",
+      "you're useless",
+      "you suck",
+      "eat shit",
+      "get bent",
+      "buzz off",
+      "drop dead",
+      "take a hike",
+      "kick rocks",
+      "leave me alone",
+      "who asked you",
+      "you're an idiot",
+      "you're stupid",
+      "worst bot ever",
+      "what a joke",
+      "get out of here",
+      "shut up",
+      "piss off mate",
+      "get a life",
+      "nobody cares",
+      "you're a waste of time",
+      "stop talking",
+      "stop wasting my time",
+      "go away",
+      "get wrecked",
+      "you're pathetic",
+      "you're clueless",
+      "you're annoying",
+      "learn something",
+      "touch grass",
+      "cry about it",
+      "cope harder",
+      "stay mad",
+      "keep coping",
+      "nice try",
+      "whatever loser",
+      "you're embarrassing yourself",
+      "what a clown",
+      "absolute joke",
+      "hard pass",
+      "not interested",
+      "take the hint",
+      "go bother someone else",
+      "spare me",
+      "save it",
+      "give it a rest",
+      "enough already",
+      "get over yourself",
+      "nobody wants your opinion",
+      "keep dreaming",
+      "better luck next time",
+      "that's rich coming from you",
+      "imagine thinking that",
+      "try again."
+    ],
+    "confidence": 0.9,
+    "active": true
+  },
+  {
+    "category": "general",
+    "question": "how are you doing?",
+    "answer": "Doing great, thanks for asking! How can I help you today?",
+    "keywords": [
+      "how are you",
+      "hows it going",
+      "casual greeting"
+    ],
+    "confidence": 1.0,
+    "active": true
+  },
+  {
+    "category": "general",
+    "question": "hello",
+    "answer": "Hi! Welcome! I'm Shubham's assistant. Ask me about his work, projects, experience, or how to get in touch.",
+    "keywords": [
+      "hello",
+      "hi",
+      "hey",
+      "yo",
+      "greetings",
+      "namaste"
+    ],
+    "confidence": 1.0,
+    "active": true
+  },
+  {
+    "category": "general",
+    "question": "how can I contact you?",
+    "answer": "You can reach me via the portfolio contact form — I respond quickly.",
+    "keywords": [
+      "contact",
+      "email",
+      "reach",
+      "hire",
+      "freelance"
+    ],
+    "confidence": 1.0,
+    "active": true
+  },
+  {
+    "category": "general",
+    "question": "are you available for hire?",
+    "answer": "For opportunities, reach out through the portfolio's contact section — Shubham is always open to hearing about interesting work.",
+    "keywords": [
+      "hire",
+      "available",
+      "freelance",
+      "job"
+    ],
+    "confidence": 1.0,
+    "active": true
+  },
+  {
+    "category": "general",
+    "question": "what projects have you worked on?",
+    "answer": "He has built portfolio platforms and admin/dashboard systems — including this very site, with a content management system, data APIs, and an Ask Me Anything engine.",
+    "keywords": [
+      "projects",
+      "portfolio",
+      "work examples"
+    ],
+    "confidence": 1.0,
+    "active": true
+  },
+  {
+    "category": "general",
+    "question": "tell me about your experience",
+    "answer": "Shubham builds full-stack web applications end to end: REST APIs, database schemas and migrations, admin consoles, and frontend dashboards. He enjoys clean architecture and scalable backend systems.",
+    "keywords": [
+      "experience",
+      "background",
+      "work history",
+      "career",
+      "about"
+    ],
+    "confidence": 1.0,
+    "active": true
+  },
+  {
+    "category": "general",
+    "question": "what are your main skills?",
+    "answer": "Shubham works primarily with Java and the Spring Boot ecosystem (Spring Boot 4, jOOQ, Flyway, PostgreSQL), plus modern JavaScript/TypeScript frontends like React on the web.",
+    "keywords": [
+      "skills",
+      "technologies",
+      "tech stack",
+      "what do you use",
+      "stack"
+    ],
+    "confidence": 1.0,
+    "active": true
+  },
+  {
+    "category": "general",
+    "question": "what are you?",
+    "answer": "I'm the Ask Me Anything assistant for Shubham's portfolio. I answer questions about his work, skills, and background.",
+    "keywords": [
+      "who are you",
+      "what can you do",
+      "what is this",
+      "assistant"
+    ],
+    "confidence": 1.0,
+    "active": true
+  },
+  {
+    "category": "general",
+    "question": "what is your tech stack?",
+    "answer": "My core stack includes Java with Spring Boot on the backend and modern web technologies on the frontend, with a focus on reliable databases.",
+    "keywords": [
+      "tech stack",
+      "technologies",
+      "frameworks",
+      "java",
+      "spring",
+      "react",
+      "postgresql"
+    ],
+    "confidence": 1.0,
+    "active": true
+  }
+]

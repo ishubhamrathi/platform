@@ -1,0 +1,52 @@
+[
+  {
+    "question": "What is your tech stack?",
+    "category": "general",
+    "displayOrder": 10
+  },
+  {
+    "question": "What are your favorite projects? Any other projects?",
+    "category": "projects",
+    "displayOrder": 11
+  },
+  {
+    "question": "How do you approach debugging and root cause analysis?",
+    "category": "personality",
+    "displayOrder": 12
+  },
+  {
+    "question": "Tell me about your backend architecture (Spring Boot + jOOQ + Flyway)",
+    "category": "backend",
+    "displayOrder": 13
+  },
+  {
+    "question": "How do you optimize PostgreSQL queries?",
+    "category": "database",
+    "displayOrder": 14
+  },
+  {
+    "question": "What AI and automation do you work on?",
+    "category": "ai",
+    "displayOrder": 15
+  },
+  {
+    "question": "Why should I hire you?",
+    "category": "recruiter",
+    "displayOrder": 16
+  },
+  {
+    "question": "How can I contact you?",
+    "category": "contact",
+    "displayOrder": 17
+  },
+  {
+    "question": "Tell me more about your projects",
+    "category": "projects",
+    "displayOrder": 18
+  },
+  {
+    "question": "Show me backend projects",
+    "category": "projects",
+    "displayOrder": 19
+  }
+]
