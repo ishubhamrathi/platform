@@ -98,7 +98,24 @@ Cookie: SESSION=<admin_session>
       { "name": "author", "label": "Author", "type": "text", "sortable": true, "filterable": true },
       { "name": "genre", "label": "Genre", "type": "text", "sortable": true, "filterable": true },
       { "name": "cover_url", "label": "Cover URL", "type": "url", "sortable": false, "filterable": false },
+      { "name": "cover_url_large", "label": "Cover Large", "type": "url", "sortable": false, "filterable": false },
+      { "name": "cover_url_spine", "label": "Spine Cover", "type": "url", "sortable": false, "filterable": false },
+      { "name": "cover_url_back", "label": "Back Cover", "type": "url", "sortable": false, "filterable": false },
       { "name": "google_link", "label": "Google Books", "type": "url", "sortable": false, "filterable": false },
+      { "name": "open_library_key", "label": "Open Library Key", "type": "text", "sortable": true, "filterable": true },
+      { "name": "isbn_13", "label": "ISBN-13", "type": "text", "sortable": true, "filterable": true },
+      { "name": "isbn_10", "label": "ISBN-10", "type": "text", "sortable": false, "filterable": true },
+      { "name": "publisher", "label": "Publisher", "type": "text", "sortable": true, "filterable": true },
+      { "name": "published_year", "label": "Year", "type": "number", "sortable": true, "filterable": true },
+      { "name": "page_count", "label": "Pages", "type": "number", "sortable": true, "filterable": false },
+      { "name": "language", "label": "Language", "type": "text", "sortable": false, "filterable": true },
+      { "name": "dimensions_cm", "label": "Dimensions (cm)", "type": "text", "sortable": false, "filterable": false },
+      { "name": "spine_width_cm", "label": "Spine Width (cm)", "type": "number", "sortable": false, "filterable": false },
+      { "name": "model_url", "label": "3D Model URL", "type": "url", "sortable": false, "filterable": false },
+      { "name": "shelf_position", "label": "Shelf Position", "type": "number", "sortable": true, "filterable": false },
+      { "name": "shelf_row", "label": "Shelf Row", "type": "number", "sortable": true, "filterable": false },
+      { "name": "rotation_y_deg", "label": "Rotation Y (°)", "type": "number", "sortable": false, "filterable": false },
+      { "name": "custom_data", "label": "Custom Data", "type": "json", "sortable": false, "filterable": false },
       { "name": "is_featured", "label": "Featured", "type": "boolean", "sortable": true, "filterable": true },
       { "name": "is_active", "label": "Active", "type": "boolean", "sortable": true, "filterable": true },
       { "name": "display_order", "label": "Display Order", "type": "number", "sortable": true, "filterable": false },
@@ -148,8 +165,25 @@ Content-Type: application/json
   "author": "Robert C. Martin",
   "description": "A handbook of agile software craftsmanship.",
   "cover_url": "https://covers.openlibrary.org/b/id/8441961-L.jpg",
+  "cover_url_large": "https://covers.openlibrary.org/b/id/8441961-L.jpg",
+  "cover_url_spine": "https://covers.openlibrary.org/b/id/8441961-spine.jpg",
+  "cover_url_back": "https://covers.openlibrary.org/b/id/8441961-back.jpg",
   "genre": "Software Engineering",
   "google_link": "https://books.google.com/books?id=23iAl3JY9rAC",
+  "open_library_key": "OL44598888M",
+  "isbn_13": "9780132350884",
+  "isbn_10": "0132350882",
+  "publisher": "Prentice Hall",
+  "published_year": 2008,
+  "page_count": 464,
+  "language": "en",
+  "dimensions_cm": "23.5x19x3.2",
+  "spine_width_cm": 2.8,
+  "model_url": "https://example.com/models/clean-code.glb",
+  "shelf_position": 0,
+  "shelf_row": 0,
+  "rotation_y_deg": 0,
+  "custom_data": { "series": "Clean Code", "volume": 1 },
   "is_featured": true,
   "display_order": 0,
   "is_active": true
@@ -170,7 +204,13 @@ Content-Type: application/json
 
 {
   "is_featured": false,
-  "display_order": 5
+  "display_order": 5,
+  "cover_url_spine": "https://covers.openlibrary.org/b/id/8441961-spine-v2.jpg",
+  "cover_url_back": "https://covers.openlibrary.org/b/id/8441961-back-v2.jpg",
+  "shelf_position": 2,
+  "shelf_row": 1,
+  "rotation_y_deg": 15,
+  "custom_data": { "series": "Clean Code", "volume": 1, "readStatus": "completed" }
 }
 ```
 
@@ -203,8 +243,26 @@ Response `200 OK`:
 | `author` | varchar(255) | **yes** | Author name |
 | `description` | text | no | Short description/summary |
 | `cover_url` | varchar(500) | no | Cover image URL (for frontend `<img>` rendering) |
+| `cover_url_large` | varchar(500) | no | High-resolution cover for 3D bookshelf texture |
+| `cover_url_spine` | varchar(500) | no | Spine image for 3D bookshelf rendering |
+| `cover_url_back` | varchar(500) | no | Back cover image for 3D bookshelf rendering |
 | `genre` | varchar(100) | no | Genre/category (e.g. "Fiction", "Software Engineering", "Science Fiction") |
 | `google_link` | varchar(500) | no | Google Books URL |
+| `open_library_key` | varchar(64) | no | Open Library edition key (e.g. OL29220209M) |
+| `google_volume_id` | varchar(64) | no | Google Books volume ID |
+| `isbn_13` | varchar(13) | no | ISBN-13 for catalogue lookups |
+| `isbn_10` | varchar(10) | no | Legacy ISBN-10 |
+| `publisher` | varchar(255) | no | Publisher name |
+| `published_year` | smallint | no | Original publication year |
+| `page_count` | int | no | Number of pages; used to estimate spine width |
+| `language` | varchar(50) | no | ISO 639-1 language code (e.g. "en") |
+| `dimensions_cm` | varchar(50) | no | Physical dimensions "HxWxD" in cm (e.g. "21.5x14x2.3") |
+| `spine_width_cm` | numeric(5,2) | no | Spine thickness in cm (estimated from page_count if null) |
+| `model_url` | varchar(500) | no | Optional GLTF/GLB 3D model URL |
+| `shelf_position` | int | no | Manual left-to-right position on shelf |
+| `shelf_row` | int | no | Shelf row (0 = bottom, 1 = next up, etc.) |
+| `rotation_y_deg` | int | default 0 | Yaw rotation in degrees for angled placement (0-359) |
+| `custom_data` | jsonb | no | Extensible JSON for series, volume, tags, reading status |
 | `is_featured` | boolean | default false | Show on homepage featured section |
 | `is_active` | boolean | default true | Only active books appear in public API |
 | `display_order` | int | default 0 | Sort order for public display |
