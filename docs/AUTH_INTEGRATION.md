@@ -11,8 +11,63 @@ http://localhost:8080/api/auth
 - **Max-Age:** 86400 seconds (1 day)
 - **SameSite:** `None`
 - **Secure:** `true` — the cookie is only sent over HTTPS (`http://localhost` is treated as a secure context by browsers). Do not change these flags in the browser.
-- The backend uses **Spring Session** with a JDBC store (`spring.session.store-type: jdbc`, timeout 86400s). After login, the server sets the `SESSION` cookie automatically. The browser must send this cookie on subsequent requests (`credentials: "include"`).
+- The backend uses **Spring Session** with a JDBC store (`spring.session.store-type: jdbc`, timeout 86400s). The `SPRING_SESSION` / `SPRING_SESSION_ATTRIBUTES` tables are created by Flyway migration **V87** in the `platform` schema (`spring.session.jdbc.initialize-schema: never` — schema is Flyway-owned, so the store must not create or drop it). After login, the server sets the `SESSION` cookie automatically. The browser must send this cookie on subsequent requests (`credentials: "include"`).
 - One active session per user (`maximumSessions(1)`). Login rotates the session id (old session is invalidated) to prevent session fixation.
+
+---
+
+## CSRF Protection (required)
+
+CSRF is **enabled**. The server issues a `XSRF-TOKEN` cookie (not HttpOnly) and expects it back
+in the `X-XSRF-TOKEN` **request header** on every state-changing request.
+
+**Rules:**
+- **Unsafe methods** — `POST`, `PUT`, `PATCH`, `DELETE` — MUST include the `X-XSRF-TOKEN` header.
+- **Safe methods** — `GET`, `HEAD`, `OPTIONS` — do not need the header.
+- Endpoints reached **before any session or CSRF cookie exists** are exempt:
+  `/api/auth/login`, `/api/auth/register`, `/api/auth/logout`, `POST /api/identity`.
+- A missing/invalid token returns **`403 Forbidden`** with `{"error":"Invalid CSRF token"}`.
+
+The `XSRF-TOKEN` cookie is set automatically by the server, so a client only needs to read the
+cookie and copy its value into the header. Refresh it after login.
+
+**JavaScript helper (matches `frontend/src/api/client.ts`):**
+
+```javascript
+function getCookie(name) {
+  const m = document.cookie.match(new RegExp('(?:^|;\\s*)' + name + '=([^;]*)'));
+  return m ? decodeURIComponent(m[1]) : undefined;
+}
+
+const UNSAFE = new Set(['POST', 'PUT', 'PATCH', 'DELETE']);
+
+async function apiFetch(path, options = {}) {
+  const method = (options.method || 'GET').toUpperCase();
+  const headers = { 'Content-Type': 'application/json', ...(options.headers || {}) };
+  if (UNSAFE.has(method)) {
+    const token = getCookie('XSRF-TOKEN');
+    if (token) headers['X-XSRF-TOKEN'] = token;
+  }
+  return fetch(path, { ...options, headers, credentials: 'include' });
+}
+```
+
+> `SameSite=None` cookies are sent on cross-site requests, which is why the header check
+> (not the cookie alone) is what actually blocks CSRF. Do not remove the header logic.
+
+---
+
+## Authorization rules (current)
+
+- **Public (no auth):** `/api/auth/register|login|logout|me`, `/api/health`,
+  the `api-access.yaml` PUBLIC list, public reCALL `GET`s, and public read surfaces
+  (`/api/content/**`, `/api/v1/explorer/**`, `/api/v1/blog/**`, `/api/identity/**`,
+  `/api/stars/**`, `/api/assets/**` `GET`).
+- **Any logged-in user:** notifications, timeline, `/api/recall/**` (non-public),
+  `/api/auth/profile|metadata|level`, `/api/audit/**`.
+- **ADMIN only:** `/api/admin/**`, `/api/v1/data/**`, `/api/v1/widget/**`.
+  A project `X-API-Key` (`PROJECT` authority) is **never** sufficient for these.
+- **Everything else** requires authentication — the chain is default-deny.
 
 ---
 
@@ -135,31 +190,34 @@ http://localhost:8080/api/auth
 ## Frontend Implementation Notes
 
 1. **Cookie handling:** Use `credentials: "include"` in fetch/axios requests so the browser sends/receives the `SESSION` cookie.
-2. **Protected routes:** Call `GET /api/auth/me` on app load to check if the user is still authenticated.
-3. **Logout:** Call `POST /api/auth/logout`, then clear any local auth state and redirect to login.
-4. **Password storage:** Passwords are stored using BCrypt encoding via `PasswordEncoder`.
+2. **CSRF header:** For `POST`/`PUT`/`PATCH`/`DELETE`, copy the `XSRF-TOKEN` cookie into the `X-XSRF-TOKEN` header (see the helper above). This is mandatory — these methods now fail with 403 without it.
+3. **Protected routes:** Call `GET /api/auth/me` on app load to check if the user is still authenticated.
+4. **Logout:** Call `POST /api/auth/logout`, then clear any local auth state and redirect to login.
+5. **Password storage:** Passwords are stored using BCrypt encoding via `PasswordEncoder`.
+6. **Admin surface:** `/api/admin/**` and `/api/v1/data|widget/**` now require a logged-in **ADMIN**. A `PROJECT` API key cannot call them.
 
 ### Example fetch calls (JavaScript)
 
 ```javascript
-// Login
-const res = await fetch('http://localhost:8080/api/auth/login', {
+// Reuse the apiFetch() helper defined in the CSRF section above.
+
+// Login (CSRF-exempt)
+const res = await apiFetch('http://localhost:8080/api/auth/login', {
   method: 'POST',
-  headers: { 'Content-Type': 'application/json' },
-  credentials: 'include',
   body: JSON.stringify({ email: 'admin@example.com', password: 'password' })
 });
 const data = await res.json();
 
-// Check auth
-const meRes = await fetch('http://localhost:8080/api/auth/me', {
-  credentials: 'include'
-});
+// Check auth (safe method, no token needed)
+const meRes = await apiFetch('http://localhost:8080/api/auth/me');
 const user = await meRes.json();
 
-// Logout
-await fetch('http://localhost:8080/api/auth/logout', {
-  method: 'POST',
-  credentials: 'include'
+// A state-changing call now carries X-XSRF-TOKEN automatically
+await apiFetch('http://localhost:8080/api/auth/profile', {
+  method: 'PUT',
+  body: JSON.stringify({ name: 'New Name' })
 });
+
+// Logout (CSRF-exempt)
+await apiFetch('http://localhost:8080/api/auth/logout', { method: 'POST' });
 ```

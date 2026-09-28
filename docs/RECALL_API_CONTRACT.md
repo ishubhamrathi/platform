@@ -372,7 +372,84 @@ Auth required. Only owner. Response `200` `{ "id":"uuid","endedAt":"..." }`.
 
 Streak auto-updated on `POST /reviews` (no separate trigger needed). Also `GET /api/recall/streak-days` reflects it.
 
-### 3.8 Profiles
+### 3.8 AI enrichment
+
+Two routes, one response shape. `POST /api/recall/enrich` takes the question text; `POST /api/recall/questions/{id}/enrich` reads it from the bank. Both are **auth required** — enrichment is rate-limited per signed-in user, not per IP.
+
+#### `POST /api/recall/enrich`
+
+Request:
+```json
+{
+  "question": "What is a write-ahead log?",
+  "topic": "Database",
+  "difficulty": "Medium",
+  "persist": true
+}
+```
+
+Only `question` is required. `topic` defaults to `General`, `difficulty` to `Medium`, `persist` to `false`.
+
+#### `POST /api/recall/questions/{id}/enrich?persist=true`
+
+No body. Returns the same shape, plus `id`. With `persist=true` the sanitised payload is written to the question row and the response carries `"persisted": true`.
+
+Response `200`:
+```json
+{
+  "question": "What is a write-ahead log?",
+  "topic": "Database",
+  "difficulty": "Medium",
+  "answer": "A write-ahead log is a sequential, append-only record...",
+  "example": "Consider a bank transfer: the debit is logged before the balance is written...",
+  "deepDive": "The log lets the database replay committed operations after a crash...",
+  "sources": [
+    {
+      "title": "Write-ahead logging",
+      "url": "https://example.com/reference",
+      "publisher": "example.com",
+      "snippet": "Supporting text from the retrieved page."
+    }
+  ],
+  "terms": [
+    { "term": "fsync", "definition": "Force a buffer to durable storage." }
+  ],
+  "model": "ai",
+  "generatedAt": "2026-09-28T10:15:30Z",
+  "cached": false,
+  "id": "3f1c…",
+  "persisted": true
+}
+```
+
+#### Field rules
+
+| Field | Rule |
+|---|---|
+| `answer` | Direct answer. Sanitised: model scaffolding and JSON fences are stripped, but `**bold**` and fenced code inside the answer are preserved. |
+| `example` | Worked example, same sanitisation. |
+| `deepDive` | Longer explanation. **Optional** — may be absent or empty. Render it only when present. |
+| `sources` | Grounded citations, **at most 8**, in retrieval order. Every `url` was actually retrieved; a URL invented by the model is dropped, so an empty list means "uncited", not "broken". |
+| `terms` | Glossary entries, **at most 10**, kept only when the term occurs in the generated text — safe to render as a definition list without re-checking. |
+| `model` | Short provider/model token, never a prompt, template, or config id. Anything that looks like one is normalised to `"ai"`. |
+| `generatedAt` | ISO-8601 instant. |
+| `cached` | `true` when served from the enrich cache rather than a live provider call. |
+| `id` / `persisted` | Only on the by-id route. |
+
+Inline `[1]`-style markers in `answer` reference `sources[n]`. Markers pointing at a source that was not retrieved are stripped, so never render a marker that has no matching source.
+
+#### Caching
+
+Identical `(question, topic, difficulty)` within a model generation is served from the `recall_enrich_cache` table with `cached: true`, so repeated views are free and fast. The cached row is the **post-sanitisation** payload, so a fix to the sanitiser also stops a previously-poisoned entry from being served. Changing the model invalidates the row rather than serving stale prose. The rate limit is applied **before** the cache lookup, so a client cannot use the cache to bypass it.
+
+#### Back-compat fields
+
+`explanation`, `answerParagraphs`, `deepDiveParagraphs`, `explanationParagraphs`, `source`, `sourceUrl`, `sourceLinks`, `searchProvider` and `format` are still emitted for clients shipped against the v1 shape (`explanation` aliases `deepDive`, `source` aliases `model`, `format` is always `"paragraphs"`). **New clients should read the v2 fields above and ignore these.** They are the only parts of the response that may change shape again.
+
+`sources` and `sourceLinks` are empty when search is disabled, the provider is unreachable, or the provider found nothing for the question. That is a normal `200`, not an error — but it does mean the answer is uncited model output, so the UI should not imply it was verified.
+
+
+### 3.9 Profiles
 
 Existing auth covers this (no new endpoint):
 
@@ -386,7 +463,7 @@ Existing auth covers this (no new endpoint):
 | Endpoint | Method | Body | Response |
 |---|---|---|---|
 | `/api/auth/register` | POST | `{ "email","password","name" }` (`name` maps to Supabase `display_name`) | `201 { "id","email","name","role" }` or `409 { "error":"Email already exists" }` |
-| `/api/auth/login` | POST | `{ "email","password" }` | `200 { "id","email","name","role" }` + `Set-Cookie: JSESSIONID=...` |
+| `/api/auth/login` | POST | `{ "email","password" }` | `200 { "id","email","name","role" }` + `Set-Cookie: SESSION=…` |
 | `/api/auth/logout` | POST | — | `200 { "message":"Logged out successfully" }` |
 | `/api/auth/me` | GET | — | `200 { "id","email","name","role", "streakCount?","totalReviews?" }` or `401` |
 
@@ -464,9 +541,12 @@ Success: `200/201` JSON, `204` delete. Errors:
 | `400` | validation (`topic` not in enum, missing `question`) | `{ "error":"Validation failed","fieldErrors":{"question":"must not be blank"} }` |
 | `401` | no session / not authenticated | `{ "error":"Not authenticated" }` |
 | `403` | RLS-equivalent: not author/ADMIN, or PROJECT key without rule | `{ "error":"Project access denied — check api_access_rules for this path" }` or `{ "error":"Admin access required" }` |
-| `404` | question not found / not visible | `{ "error":"Record not found" }` |
+| `404` | question not found / not visible, or a malformed `{id}` on the by-id enrich route (that one is `400 { "error":"invalid id" }`) | `{ "error":"Record not found" }` |
 | `409` | `bookmarks_pkey` duplicate, `users.email` unique | `{ "error":"duplicate key value violates unique constraint \"recall_bookmarks_pkey\"" }` (mapped to toast) |
-| `429` | rate-limit (FixedWindowRateLimiter on reviews/search) | `{ "error":"Too many requests" }` |
+| `429` | rate-limit — `FixedWindowRateLimiter` on reviews/search, per-user limit on `/api/recall/enrich` | `{ "error":"Too many requests" }` or, for enrich, `{ "error":"Too many AI requests","hint":"Try again shortly." }` |
+| `503` | enrichment only: a provider answered but the output was unusable, so nothing is served rather than a thin answer | `{ "error":"AI enrichment under maintenance" }` |
+
+`fieldErrors` is present only on `400` validation failures; every other error keeps the two-field `error`/`hint` shape.
 
 Client maps to toast via `showToast` (same as Supabase `code:23505` handling).
 
