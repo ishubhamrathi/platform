@@ -50,7 +50,12 @@ Returns the full night sky (newest first) plus aggregate counters.
       "country": "India",
       "color": "#fff8e1",
       "added_at": "2026-08-11T14:22:00Z",
-      "username": "BraveFox42"
+      "username": "BraveFox42",
+      "region": "Haryana",
+      "country_code": "in",
+      "timezone": "Asia/Kolkata",
+      "latitude": 28.4089,
+      "longitude": 77.3178
     }
   ],
   "meta": {
@@ -71,6 +76,14 @@ Returns the full night sky (newest first) plus aggregate counters.
 - `name`, `city`, `country` — optional strings; `""` when empty.
 - `color` — one of the client palette hex values (see below), always present.
 - `added_at` — ISO 8601 UTC timestamp (render as e.g. "Aug 2026").
+- `region`, `country_code`, `timezone` — read-only location detail. Optional
+  strings; `""` when unknown. `country_code` is ISO 3166-1 alpha-2 lowercase and
+  `timezone` is an IANA identifier. Clients never send these; they are resolved
+  server-side from the client IP and cannot be edited.
+- `latitude`, `longitude` — read-only approximate coordinates, or `null`. Always
+  both set or both `null`, and city-centroid level (a few kilometres), not a
+  device fix. `null` for stars placed before location resolution existed and for
+  unresolvable addresses (loopback, private ranges, provider outage).
 - `username` — the visitor's persistent random username (e.g. "BraveFox42").
   Resolved from the `visitor_identity` cookie. Empty string if identity not found.
 - `meta.cities` / `meta.countries` — **distinct** non-empty values.
@@ -111,7 +124,12 @@ Creates a new anonymous star.
     "country": "India",
     "color": "#fff8e1",
     "added_at": "2026-08-13T09:10:00Z",
-    "username": "BraveFox42"
+    "username": "BraveFox42",
+    "region": "Haryana",
+    "country_code": "in",
+    "timezone": "Asia/Kolkata",
+    "latitude": 28.4089,
+    "longitude": 77.3178
   },
   "meta": {
     "total_stars": 1285,
@@ -180,7 +198,12 @@ Updates this visitor's existing star. The visitor is identified by their
   "country": "New Country",
   "color": "#c4b5fd",
   "added_at": "2026-08-13T09:10:00Z",
-  "username": "BraveFox42"
+  "username": "BraveFox42",
+  "region": "Haryana",
+  "country_code": "in",
+  "timezone": "Asia/Kolkata",
+  "latitude": 28.4089,
+  "longitude": 77.3178
 }
 ```
 
@@ -248,5 +271,10 @@ out-of-palette colors to the nearest listed value.
 - Geolocation is best-effort: the client sends `city` / `country` hints from
   `https://ipapi.co/json/`; the backend prefers its own server-side lookup when
   enabled (`STARS_IPGEO_ENABLED=true`) and otherwise trusts the client hints.
+- `region`, `country_code`, `timezone`, `latitude` and `longitude` are resolved
+  server-side only. Clients cannot send or edit them, and a failed lookup leaves
+  the previously stored values intact rather than clearing them. Resolution runs
+  on `POST` and on `PATCH`, so a visitor whose first lookup hit a provider outage
+  picks up coordinates on a later update.
 - Persistence is permanent (database row). The endpoint must never take down the
   rest of the site if it fails.

@@ -38,13 +38,14 @@ No auth required (PUBLIC).
       "googleLink": "https://books.google.com/books?id=23iAl3JY9rAC",
       "isFeatured": true,
       "displayOrder": 0,
-      "createdAt": "2025-01-15T10:30:00.000+00:00",
-      "updatedAt": "2025-01-15T10:30:00.000+00:00"
+      "createdAt": "2025-01-15T10:30:00.000+00:00"
     }
   ],
   "count": 1
 }
 ```
+
+> `updatedAt` is intentionally not served by the public endpoint.
 
 ### Single-book detail (fallback)
 
@@ -96,6 +97,7 @@ Cookie: SESSION=<admin_session>
       { "name": "id", "label": "ID", "type": "uuid", "sortable": true, "filterable": true },
       { "name": "title", "label": "Title", "type": "text", "sortable": true, "filterable": true },
       { "name": "author", "label": "Author", "type": "text", "sortable": true, "filterable": true },
+      { "name": "description", "label": "Description", "type": "textarea", "sortable": false, "filterable": false },
       { "name": "genre", "label": "Genre", "type": "text", "sortable": true, "filterable": true },
       { "name": "cover_url", "label": "Cover URL", "type": "url", "sortable": false, "filterable": false },
       { "name": "cover_url_large", "label": "Cover Large", "type": "url", "sortable": false, "filterable": false },

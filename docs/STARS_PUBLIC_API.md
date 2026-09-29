@@ -31,7 +31,12 @@ GET /api/content?type=stars
         "country": "",
         "color": "#a7f3d0",
         "added_at": "2026-09-28T10:51:40.294684Z",
-        "username": ""
+        "username": "",
+        "region": "",
+        "country_code": "",
+        "timezone": "",
+        "latitude": null,
+        "longitude": null
       }
     ]
   }
@@ -50,6 +55,19 @@ GET /api/content?type=stars
 | `color` | string | Hex color from palette |
 | `added_at` | ISO 8601 | Timestamp when star was placed |
 | `username` | string | Random username (e.g. "BraveFox42") |
+| `region` | string | State / province (may be empty) |
+| `country_code` | string | ISO 3166-1 alpha-2, lowercase (may be empty) |
+| `timezone` | string | IANA timezone id (may be empty) |
+| `latitude` | number \| null | Approximate city-centroid latitude, or `null` |
+| `longitude` | number \| null | Approximate city-centroid longitude, or `null` |
+
+The location fields are best-effort IP geolocation. `region`, `country_code`,
+`timezone`, `latitude` and `longitude` are all `""` or `null` for stars placed
+before location resolution existed and for stars whose address could not be
+resolved (loopback, private ranges, provider failure). `latitude` and
+`longitude` are always either both set or both `null`, and are city-centroid
+approximations accurate to a few kilometres — not a device-level fix. Treat them
+as optional in all consumers.
 
 #### Meta Object
 | Field | Type | Description |

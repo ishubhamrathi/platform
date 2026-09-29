@@ -58,7 +58,6 @@ GET /api/content?type=books&books_limit=20
         "isFeatured": true,
         "displayOrder": 0,
         "createdAt": "2025-01-15T10:30:00.000+00:00",
-        "updatedAt": "2025-01-15T10:30:00.000+00:00",
         "externalUrl": "https://openlibrary.org/books/OL44598888M"
       }
     ],
@@ -98,8 +97,10 @@ GET /api/content?type=books&books_limit=20
 | `isFeatured` | boolean | Featured on homepage |
 | `displayOrder` | integer | Sort order (ascending) |
 | `createdAt` | ISO 8601 | Creation timestamp |
-| `updatedAt` | ISO 8601 | Last update timestamp |
 | `count` | integer | Total books returned |
+
+> `updatedAt` is intentionally not served. The public content endpoint is
+> unauthenticated, so the row's last-edit time leaks admin activity.
 
 ---
 
@@ -134,8 +135,7 @@ GET /api/content?type=books&id=a1b2c3d4-e5f6-7890-abcd-ef1234567890
     "googleLink": "https://books.google.com/books?id=23iAl3JY9rAC",
     "isFeatured": true,
     "displayOrder": 0,
-    "createdAt": "2025-01-15T10:30:00.000+00:00",
-    "updatedAt": "2025-01-15T10:30:00.000+00:00"
+    "createdAt": "2025-01-15T10:30:00.000+00:00"
   }
 }
 ```
