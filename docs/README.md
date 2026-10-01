@@ -7,6 +7,7 @@ Shared documentation for the platform (consolidated from backend and frontend re
 - [AMA_API.md](AMA_API.md) - Ask Me Anything widget: public ask + admin review API
 - [API_ACCESS_CONTROL.md](API_ACCESS_CONTROL.md) - API key / access rule configuration
 - [API_MIGRATION.md](API_MIGRATION.md)
+- [AUTH_CLIENT_GUIDE.md](AUTH_CLIENT_GUIDE.md) - Client-facing sign-in guide (Google, email+password, OTP, cookie auth for all API calls)
 - [AUTH_INTEGRATION.md](AUTH_INTEGRATION.md)
 - [BLOG_TAGS.md](BLOG_TAGS.md)
 - [BOOKS_API.md](BOOKS_API.md)
